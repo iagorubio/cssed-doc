@@ -3,8 +3,7 @@
 <!ENTITY manualversion "1.14">
 <!ENTITY softwareversion "0.3.1 - 0.3.0">
 <!ENTITY builddate SYSTEM "builddate">
-<!ENTITY intro SYSTEM "cssed-manual-intro.sgml">
-<!ENTITY news SYSTEM "cssed-manual-news.sgml">
+<!ENTITY intro SYSTEM "cssed-manual-intro.sgml"><!ENTITY news SYSTEM "cssed-manual-news.sgml">
 <!ENTITY install SYSTEM "cssed-manual-install.sgml">
 <!ENTITY interface SYSTEM "cssed-manual-interface.sgml">
 <!ENTITY usage SYSTEM "cssed-manual-usage.sgml">

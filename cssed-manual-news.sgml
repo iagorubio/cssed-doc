@@ -1,0 +1,234 @@
+<preface id="news">
+<title>New in this release</title>
+
+<sect1 id="news-plugins">
+<title>Plugins</title>
+<para>The major change in this release the introduction of plugins, which add functionalities to <application>cssed</application>. They are loadable/unloadable at run time via the <menuchoice><guimenu>Plugins</guimenu></menuchoice> menu, and distributed as separate packages.</para>
+
+<sect2 id="news-plugins-official">
+<title>Official plugins</title>
+<para>Available plugins are:</para>
+<itemizedlist>
+<listitem>
+<para><application>cssed-filebrowser-plugin</application>: adds a file browser a la gnome2</para>
+</listitem>
+<listitem>
+<para><application>cssed-findinfiles-plugin</application>: adds a tab to the footer panel, which allows you to search for a term from a given directory</para>
+</listitem>
+<listitem>
+<para><application>cssed-quicksearch-plugin</application>: adds a search field to the toolbar, for use within the active document</para>
+</listitem>
+<listitem>
+<para><application>cssed-tag-plugin</application>: adds a new tab to the footer panel, to create and browse tags created with exuberant-ctags</para>
+</listitem>
+<listitem>
+<para><application>cssed-vte-plugin</application>: adds a console to the footer panel, from which you can execute any command line tool</para>
+</listitem>
+</itemizedlist>
+</sect2>
+
+<sect2 id="news-plugins-unofficial">
+<title>Unofficial plugins</title>
+<para>Another plugin not included in the official release is:</para>
+<itemizedlist>
+<listitem>
+<para><application>cssed-plugindoc-plugin</application>: adds an item to the plugin menu to browse the documentation for plugins, in case you want to write your own plugin.</para>
+</listitem>
+</itemizedlist>
+</sect2>
+</sect1>
+
+<sect1 id="news-menu">
+<title>Addition to the menus</title>
+<para>Another important change is addition to the menus, improving the user's experience.</para>
+
+<sect2 id="news-menu-file">
+<title>File menu</title>
+<itemizedlist>
+<listitem>
+<para><menuchoice><guimenu>File</guimenu><guimenuitem>Close</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>File</guimenu><guimenuitem>Close all</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+ <para><menuchoice><guimenu>File</guimenu><guimenuitem>Revert</guimenuitem></menuchoice></para>
+ </listitem>
+<listitem>
+<para><menuchoice><guimenu>File</guimenu><guimenuitem>Save all</guimenuitem></menuchoice></para>
+</listitem>
+</itemizedlist>
+</sect2>
+
+<sect2 id="news-menu-view">
+<title>View menu</title>
+<para>These changes are effective in version 0.3.1:</para>
+<itemizedlist>
+<listitem>
+<para>A new menu which allows you to create, load, or modify  documents lists, i.e. lists of documents you want to open quickly in a cssed session. It consists of:</para>
+<itemizedlist>
+<listitem>
+<para><menuchoice><guimenu>View</guimenu><guisubmenu>Document list</guisubmenu><guimenuitem>Opened documents</guimenuitem></menuchoice></para>
+</listitem>
+<listitem><para><menuchoice><guimenu>View</guimenu><guisubmenu>Document list</guisubmenu><guimenuitem>Open from file</guimenuitem></menuchoice></para>
+</listitem>
+<listitem><para><menuchoice><guimenu>View</guimenu><guisubmenu>Document list</guisubmenu><guimenuitem>Blank document list</guimenuitem></menuchoice></para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>Toolbar submenu and its contents have been moved to this menu.</para>
+</listitem>
+</itemizedlist>
+</sect2>
+
+<sect2 id="news-menu-document">
+<title>Document menu</title>
+<itemizedlist>
+<listitem>
+<para>A new submenu (version 0.3.1) in the Set EOL mode menu to convert line endings from one system mode to another one:</para>
+<itemizedlist>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Set EOL mode</guisubmenu><guisubmenu>Convert EOLs</guisubmenu><guimenuitem>To Mac (CR)</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Set EOL mode</guisubmenu><guisubmenu>Convert EOLs</guisubmenu><guimenuitem>To Unix (LF)</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Set EOL mode</guisubmenu><guisubmenu>Convert EOLs</guisubmenu><guimenuitem>To Doc / Windows (CR/LF)</guimenuitem></menuchoice></para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>A new menu which allows you to change the encoding of the document with:</para>
+<itemizedlist>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Force Encoding</guisubmenu><guimenuitem>Default</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Force Encoding</guisubmenu><guimenuitem>UTF8</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Force Encoding</guisubmenu><guimenuitem>DBCS</guimenuitem></menuchoice></para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>Changes to the highlighting menu to introduce the possibility of highlighting other types of documents than just <acronym>CSS</acronym> ones. The document is highlighted according to its extension, but you can change it if not appropriate. Only the <acronym>CSS</acronym> highlighting is defined in Preferences and applied immediately. Highlighting for other types of document are currently hardcoded; this will change in a future release. The new items are the following:</para>
+<itemizedlist>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>Plain text</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>CSS</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>HTML/PHP</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>SH</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>C/CPP</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>Apache/.htaccess</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>PERL</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>Python</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>XML</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>Diff/patch</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Highlighting</guisubmenu><guimenuitem>Makefile</guimenuitem></menuchoice></para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>A <guimenu>Character set</guimenu> menu for switching between various character sets, especially useful when dealing with Asian languages:</para>
+<itemizedlist>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Character set</guisubmenu><guimenuitem>ANSI</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Character set</guisubmenu><guimenuitem>East Europe</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Character set</guisubmenu><guimenuitem>GB 2312</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Character set</guisubmenu><guimenuitem>Hangul</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Character set</guisubmenu><guimenuitem>Shift JIS</guimenuitem></menuchoice></para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>A new <guimenu>Tab background colour menu</guimenu> (in version 0.3.1) which allows you to change the background colour of the document tabs for easier recognition:</para>
+<itemizedlist>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Tab background colour</guisubmenu><guimenuitem>Revert to original colour</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Tab background colour</guisubmenu><guimenuitem>Red</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Tab background colour</guisubmenu><guimenuitem>White</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Tab background colour</guisubmenu><guimenuitem>Blue</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Tab background colour</guisubmenu><guimenuitem>Yellow</guimenuitem></menuchoice></para>
+</listitem>
+<listitem>
+<para><menuchoice><guimenu>Document</guimenu><guisubmenu>Tab background colour</guisubmenu><guimenuitem>Green</guimenuitem></menuchoice></para>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</sect2>
+
+<sect2 id="news-menu-css">
+<title>CSS menu</title>
+<para>These changes are effective in version 0.3.1:</para>
+<itemizedlist>
+<listitem>
+<para><guimenu>Validate and dump</guimenu>, <guimenu>Validate only</guimenu>, <guimenu>Scan selector</guimenu> have been moved to this menu.</para>
+</listitem>
+</itemizedlist>
+</sect2>
+
+<sect2 id="news-menu-help">
+<title>Help menu</title>
+<itemizedlist>
+<listitem>
+<para>A new menu to browse the <application>cssed</application> web site (<menuchoice><guimenu>Help</guimenu><guisubmenu>Cssed web site</guisubmenu></menuchoice>)</para>
+</listitem>
+<listitem>
+<para>Another one to access the online documentation for the latest release via one of the proposed browsers (<menuchoice><guimenu>Help</guimenu><guisubmenu>Cssed documentation on line</guisubmenu></menuchoice>).</para>
+</listitem>
+</itemizedlist>
+<warning><para>This feature is for Mac OS X users only. It is experimental and will be extended to other systems in a future release.</para></warning>
+</sect2>
+</sect1>
+
+<sect1 id="news-other">
+<title>Other changes</title>
+<para>Other changes affect the user interface:</para>
+<itemizedlist>
+<listitem>
+<para>The scratch pad in the footer panel has been split into two pads: a temporary one on the left side, and a permanent one on the right side.</para>
+</listitem>
+</itemizedlist>
+</sect1>
+
+</preface>

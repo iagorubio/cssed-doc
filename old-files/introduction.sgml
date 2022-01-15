@@ -1,0 +1,93 @@
+<!--
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook V3.1//EN">
+-->
+  <chapter>
+  <title>
+    Introduction
+  </title>
+  <sect1>
+    <title>
+      What is cssed ?
+    </title>
+    <para>
+      cssed is a small program for editing CSS style sheets, it's developed as an Open Source project under the <ulink url="http://www.gnu.org/copyleft/gpl.html">GPL</ulink>. It can be downloaded at the <ulink url="http://cssed.sourceforge.net">cssed site</ulink> or from the <ulink url="http://sourceforge.net/projects/cssed">Source Forge's Project page</ulink><anchor id="sub-sf-page">.
+    </para>
+    <para>
+      cssed tries to ease the process of creating and editing style sheets, and to format the output to improve accessibility in web developing.
+    </para>
+  </sect1>
+  <sect1>
+    <title>
+      What is CSS ?
+    </title>
+    <para>
+      CSS is the acronym for Cascading Style Sheets, and it's a <ulink url="http://www.w3.org/Style/CSS/">w3c.org</ulink> recommendation. CSS is intended to fix some caveats in HTML formatting. HTML was created to store data in a convenient manner but not specifically to present it in a visual manner. Further extensions to HTML gave it the ability to perform rendering tasks, and to embed color and rendering information in some attributes of HTML tags.
+    </para>
+    <para>
+      This finally leads to many problems in rendering the information stored in the HTML documents:
+    </para>
+    <itemizedlist>
+      <listitem>
+	<para>
+	  Each time a color or rendering attribute changes in a set of HTML documents, each of it's tag attributes must also be changed.
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  The &ldquo;font&rdquo; tag &ldquo;face&rdquo; attribute only allows for one font name. So if this font is not present on the client's browser, the client's browser will use the default font, but still processes all the tag attributes. So if a developer used the &ldquo;My Font&rdquo; font with a size of 8, it may be displayed just how they want it on their browser. But on the client's browser, the default font with a size 8 will be used if &ldquo;My Font&rdquo; is not present, and it's common that the default font with size 8 make the site impossible or hard to browse.
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  Because HTML does not have the aural attributes to deal with speech-based browsing for the visually impaired, it must be further extended to allow for this kind of browsing.
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  The formatting attributed to an HTML document can't be changed base on a browser identity or any other rendering media other than a web browser. So HTML formatted sites used to look really bad when printed, and were browser dependent. When one reads on a website &ldquo;This site has been optimized for <emphasis>this</emphasis> browser and <emphasis>this</emphasis> version with <emphasis>this</emphasis> screen resolution&rdquo; the webmaster is in fact saying &ldquo;This site will be rendered correctly only in the browser and screen resolution that I used to develop it&rdquo;.
+	</para>
+      </listitem>
+    </itemizedlist>
+    <para>
+      CSS fixes all these problems, and others, allowing developers to easily change the entire document style with changes in just one document. CSS also creates the ability to show to each different browser a different page style, thus improving the user's browsing experience. The possibility to set rules for speech machines, PDAs, mobile phones, TVs, printers and even terminal output is possible too.
+    </para>
+    <para>
+      One of the best things of CSS is that it's small and easy to learn. Much more easy than learn HTML for example.
+    </para>
+    <sect2>
+      <title>
+	Further information
+      </title>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    You can find tons of information and links in the<ulink url="http://www.w3.org/Style/CSS/"> w3c.org</ulink> CSS site
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    <ulink url=" http://www.w3.org/TR/CSS1">CSS1 specification</ulink>
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    <ulink url="http://www.w3.org/TR/CSS2">CSS2 specification</ulink>
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    <ulink url="http://www.positioniseverything.net/">Position is everything</ulink>, this is a website to learn how to go about browser bugs to get the correct rendering 
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </sect2>
+  </sect1>
+  <sect1>
+    <title>
+      Who must read this manual
+    </title>
+    <para>
+      This is the cssed application User's Manual. It's not a developer guide to the application, nor a CSS manual. Just read it if you are a cssed user.
+    </para>
+  </sect1>
+</chapter>

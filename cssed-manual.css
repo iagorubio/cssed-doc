@@ -1,0 +1,148 @@
+BODY {
+	background-color:#f8faf6;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 15px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+A:LINK {
+	color: #363;
+	text-decoration: underline;
+}
+
+A:VISITED {
+	color: #363;
+	text-decoration: underline;
+}	
+
+A:HOVER {
+	color: #363;
+	text-decoration: none;
+	font-style:italic;
+}
+
+IMG {
+	border:none;
+}
+
+P {
+	margin:2px;
+	padding-left:2px;
+	font:inherit;	
+}
+
+/* A small margin for the images */
+DIV.FIGURE {
+	margin-left:4px;
+	padding-left:4px;
+}
+
+H1, H2, H3, H4, H5, H6 {
+	color: navy;
+	background-color:transparent;
+	text-decoration:none;
+	font-weight: bold;
+	font-style: normal;
+}
+
+DIV.BOOK DIV.TITLEPAGE H2.SUBTITLE {
+   position: relative;
+   top: -15px;
+}
+
+H1 {
+	font-size: 24px;
+}
+
+DIV.CHAPTER H1, DIV.PREFACE H1, H1.TITLE, H2.SUBTITLE, .PUBDATE, .COPYRIGHT {
+	text-align: center;
+}
+
+H2.SUBTITLE {
+	font-size: 14px;
+}
+
+H2 {
+	font-size: 18px;
+}
+
+H3 {
+	font-size: 16px;
+}
+
+H4 {
+	font-size: 14px;
+}
+
+DIV.LOT {
+	margin-top: 30px;
+}
+ 
+.APPLICATION {
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+.COMPUTEROUTPUT {
+	margin-left: 20px;
+	font-family: Monaco, "Courier New", Courier, monospace;
+	font-size: small;
+	font-weight: bold;
+}
+
+DIV.REVHISTORY {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: small;
+}
+
+DIV.REVHISTORY TABLE TR TD {
+	padding-left: 10px;
+}
+
+.MOUSEBUTTON {
+	font-size: small;
+	font-style: italic;
+}
+	
+.GUILABEL {
+	font-size: small;
+	font-weight: bold;
+}
+	
+DIV.VARIABLELIST > DL > DT {
+	font-style: italic;
+	margin-left: 15px;
+}
+
+.FOOTNOTE { 
+	vertical-align: super; 
+	font-size: x-small;
+}
+
+.AUTHOR {
+	text-align: center;
+	font-size: small;
+	font-style: italic;
+	color: black;
+}
+
+.LEGALNOTICE {
+	font-family: Monaco, "Courier New", Courier, monospace;
+	font-size: x-small;
+	margin-top: 20px;	
+	margin-bottom: 20px;
+}
+
+.PROGRAMLISTING {
+	font-size: small;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.OPTION {
+	font-family: Monaco, "Courier New", Courier, monospace;
+	font-size: small;
+	padding-left: 20px;
+}

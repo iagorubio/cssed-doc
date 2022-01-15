@@ -1,0 +1,444 @@
+<chapter id="configuration">
+<title>Configuration</title>
+<para>To configure css default document's settings, you can used the configuration dialog in <application>cssed</application> tool bar (the last button on it), or configure it by hand.</para>
+
+<sect1 id="configuration-dialog">
+<title>Configuring with the dialog</title>
+<para>The configuration dialog have three tabs to let you configure <application>cssed</application>.</para>
+<para>
+<itemizedlist>
+<listitem>
+<para>The document settings tab: let you configure what settings will have a document when opened.</para>
+</listitem>
+<listitem>
+<para>The syntax highlighting tab: let you configure the colors of the colored <acronym>CSS</acronym> in the document.</para>
+</listitem>
+<listitem>
+<para>The font tab: let you change the default text editor font face and size. The styles will be ignored as they are used by the syntax highlighting,</para>
+</listitem>
+</itemizedlist>
+</para>
+
+<sect2 id="configuration-doc-settings">
+<title>The document settings tab</title>
+<para>Here you can enter the settings that will have any opened document by default. To change a setting, just <mousebutton>check</mousebutton> or <mousebutton>uncheck</mousebutton> the desired setting, then validate with the <mousebutton>OK</mousebutton> button.</para>
+<para><figure float="0" id="figure-preferences1">
+<title id="figure-preferences1-title">The Document settings tab</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/preferences1" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/preferences1.png" format="PNG"></imageobject>
+<textobject><phrase>The Document settings tab</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>
+<itemizedlist>
+<listitem>
+<para>View line numbers: when checked, new documents will have the line numbers margin expanded.</para>
+</listitem>
+<listitem>
+<para>View line endings: when checked, the End Of Line character/s will be displayed.</para>
+</listitem>
+<listitem>
+<para>View white spaces: when checked, the white space characters (tab, space,...) will be displayed.</para>
+</listitem>
+<listitem>
+<para>Wrap long lines: when checked, lines that reach the right margin of the editor window will be wrapped.</para>
+</listitem>
+<listitem>
+<para>Enable autocompletion: when checked, auto completion will be activated by default.</para>
+</listitem>
+<listitem>
+<para>Enable folding: when checked, the folding feature of the editor window will be activated.</para>
+</listitem>
+</itemizedlist>
+</para>
+</sect2>
+
+<sect2 id="configuration-highlighting">
+<title>The highlighting tab</title>
+<para>This tab let you choose your preferred color scheme for syntax highlighting.</para>
+<para><figure float="0" id="figure-preferences2">
+<title id="figure-preferences2-title">The highlighting tab</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/preferences2" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/preferences2.png" format="PNG"></imageobject>
+<textobject><phrase>The highlighting tab</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>To change the foreground or background colors of any style, <mousebutton>click</mousebutton> on the color well at the right side of each token identifier. You can also choose to have the token's face in bold style, checking a box at the row end. Once you have finished, do not forget to validate with the <mousebutton>OK</mousebutton> button.</para>
+<para>The tokens you can choose are:</para>
+<para>
+<itemizedlist>
+<listitem>
+<para>
+<emphasis>Default</emphasis> - it is the default style color </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Tag</emphasis> - style of tags (selectors) as p, u, etc. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Pseudoclass</emphasis> - style of valid pseudo classes (:hover, etc.) </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Unknown Pseudoclass</emphasis> - style of invalid pseudo classes. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Operator</emphasis> - style of CSS operators as braces, coma, etc. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Valid property</emphasis> - a property known by <application>cssed</application>. The property is the left part of the declaration line. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Invalid property</emphasis> - a property unknown to cssed. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Value</emphasis> - a value known by cssed. The value is the right part of the declaration line. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Unknown Value</emphasis> - a value unknown to cssed. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Important</emphasis> - the CSS important keyword. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Directive</emphasis> - a CSS directive as @media, @page. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Double quoted string</emphasis> - a string enclosed between double quotes. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Single quoted string</emphasis> - a string enclosed between single quotes. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Class</emphasis> - a <acronym>CSS</acronym> class (selector) as p.style. It will match the tag's class="" attribute. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Id</emphasis> - a <acronym>CSS</acronym> id as #123. It will match the tag's id="" attribute. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Function</emphasis> - a <acronym>CSS</acronym> function as url(), rgb(), attr(), ... </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Number</emphasis> - an integer or floating point number. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Valid unit</emphasis> - a unit recognized by the CSS2 standard (pt,px,em, ...). </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Color</emphasis> - a named color (blue, red, green). </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Hexadecimal color</emphasis> - a color in hexadecimal notation (0x000000, 0x000). </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Attribute match</emphasis> - an attribute matching expression ( as img[width=200] ). </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Language</emphasis> - a language matching expression ( as img:lang(en) ). </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>Comment</emphasis> - a <acronym>CSS</acronym> comment /* */. </para>
+</listitem>
+</itemizedlist>
+</para>
+</sect2>
+
+<sect2 id="configuration-fonts">
+<title>The font tab</title>
+<para>This tab let you choose the editor font family and size</para>
+<para><figure float="0" id="figure-preferences3">
+<title id="figure-preferences3-title">The font tab</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/preferences3" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/preferences3.png" format="PNG"></imageobject>
+<textobject><phrase>The font tab</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>In this tab the style choice is ignored as it is used for the syntax highlighting. To change the font, just select the font family and the size and click the <mousebutton>Apply</mousebutton> or <mousebutton>OK</mousebutton>buttons.</para>
+<para>The current font is indicated on the left side at the bottom of the dialog.</para>
+</sect2>
+</sect1>
+
+<sect1 id="configuration-config-file">
+<title>The configuration file</title>
+<para>To configure <application>cssed</application> by hand, open the file <filename>$HOME/.cssed/cssed-cfg.xml</filename> and edit it in your preferred text editor.</para>
+<para>Here is an example of a customized configuration file:</para>
+<programlisting><![CDATA[<cssed-conf>
+	  <document>
+		 <linenumbers show="true" />
+		 <autocompletion enabled="true" />
+		 <lineendings show="false" /> 
+		 <whitespaces show="false" /> 
+		 <folding enabled="true" /> 
+		 <lineswraped show="true" />
+	 	 <font name="!Lucida Grande" size="9" />
+	 </document>
+	  <window x="569" y="45" width="727" height="532">
+		  <notebook height="302" />
+		<sidebar width="240" />
+		<treeview height="111" />
+	</window>
+	<highlighting> 
+		<style name="DEFAULT" fore="0x993300" back="0xffffff" bold="false"	/>
+		 <style name="TAG" fore="0xa6896a" back="0xffffff" bold="true" />
+		 <style name="PSEUDOCLASS" fore="0xa0a0d9" back="0xffffff" bold="false" />
+		 <style name="UNKNOWN_PSEUDOCLASS" fore="0xe414eb" back="0xffffff" bold="false" />
+		 <style name="OPERATOR" fore="0xa8ad39" back="0xffffff" bold="true" />
+		 <style name="IDENTIFIER" fore="0xdfbc91" back="0xffffff" bold="true" />
+		 <style name="UNKNOWN_IDENTIFIER" fore="0x00ff" back="0xffffff" bold="false" />
+		 <style name="VALUE" fore="0xe11fea" back="0xffffff" bold="false" />
+		 <style name="COMMENT" fore="0xb0beb" back="0xffffff" bold="false" />
+		 <style name="IMPORTANT" fore="0xe441d1" back="0xffffff" bold="true" />
+		 <style name="DIRECTIVE" fore="0xb18bc8" back="0xffffff" bold="false" />
+		 <style name="DOUBLESTRING" fore="0xcf17e9" back="0xffffff" bold="false" />
+		 <style name="SINGLESTRING" fore="0x3a3ad4" back="0xffffff" bold="false" />
+		 <style name="CLASS" fore="0x76bd22" back="0xffffff" bold="true" />
+		 <style name="ID" fore="0xe61b72" back="0xffffff" bold="true" />
+		 <style name="VALID_VALUE" fore="0x2525d9" back="0xffffff" bold="false" />
+		 <style name="FUNCTION" fore="0x993300" back="0xffffff" bold="false" />
+		 <style name="NUMBER" fore="0xfaca13" back="0xffffff" bold="false" />
+		 <style name="UNIT" fore="0x569120" back="0xffffff" bold="true" />
+		 <style name="COLOR" fore="0x21c917" back="0xffffff" bold="false" />
+		 <style name="HEXACOLOR" fore="0xc7e989" back="0xffffff" bold="false" />
+		 <style name="ATTR_MATCH" fore="0x9f9fe6" back="0xffffff" bold="false" />
+		 <style name="LANGUAGE" fore="0x67eedf" back="0xffffff" bold="false" />
+	</highlighting>
+</cssed-conf>]]>
+</programlisting>
+<para>You can see that the document settings have a value of <emphasis>true</emphasis> or <emphasis>false</emphasis>, the name of the font is preceded by an exclamation mark, and the foreground and background colors are described as hexadecimal values.</para>
+<para>You can also change the size of the various elements of the window in this file.</para>
+</sect1>
+
+<sect1 id="configuration-css-definition-file">
+<title><acronym>CSS</acronym> definition file</title>
+<para>The <acronym>CSS</acronym> definition file is the core of <application>cssed</application>. It is installed in the <filename>prefix/share/cssed/data</filename> folder and named <filename>cssed-def.xml</filename>, together with the default configuration file named <filename>cssed-cfg.xml</filename>, and the dtd file named <filename>cssed-def.dtd</filename>. It has all valid <acronym>CSS</acronym> properties and values.</para>
+<para> All properties and values in <application>cssed</application> will be taken from this file. It is used by the tree view (View: <xref linkend="usage-treeview">), and by auto completion (View: <xref linkend="usage-auto-completion">). </para>
+<para>Its format is really easy XML. It has three tags only:</para>
+<itemizedlist>
+<listitem>
+<para><emphasis>&lt;cssed-def&gt;&lt;/cssed-def&gt;</emphasis> -  It is the root node and can contain one or more <emphasis>&lt;element&gt;</emphasis> tags. </para>
+</listitem>
+<listitem>
+<para><emphasis>&lt;element&gt; &lt;/element&gt;
+</emphasis> - It defines a <acronym>CSS</acronym> property as &ldquo;border&rdquo; or &ldquo;margin&rdquo; it can contain one or more
+<emphasis>&lt;value&gt;</emphasis> tags. </para>
+</listitem>
+<listitem>
+<para>
+<emphasis>&lt;value /&gt; </emphasis> - It defines one of the possible values for the element and it is an empty tag (it cannot contain any other tags). </para>
+</listitem>
+</itemizedlist>
+<para>The <emphasis>cssed-def</emphasis> element has a property
+<emphasis>implementation</emphasis> that will be shown as the root node in the tree view (View: <xref linkend="usage-treeview">). Valid examples are: </para>
+<programlisting><![CDATA[<csssed-def implementation="CSS-2"></cssed-def>
+<csssed-def implementation="My CSS"></cssed-def>]]></programlisting>
+<para>The element node has an attribute name that must contain the property's name. Valid examples are:</para>
+<programlisting><![CDATA[<element name="azimuth"></element><element name="azimuth"></element>]]></programlisting>
+<para> The <emphasis>value</emphasis> node has two attributes. The first named <emphasis>type</emphasis> is right now unused but it is mandatory to set it to the values <emphasis>string</emphasis> or <emphasis>fixed-string</emphasis> for compatibility with further versions of cssed. The second one, <emphasis>name</emphasis>, must contain the value itself. If type is equal to <emphasis>string</emphasis>, it means that is a complex - not fixed - value and must be dialog driven. The dialog name must be enclosed between braces. If type is equal to <emphasis>fixed-string</emphasis>, it means that the string in the name attribute is a possible value for the property and will be inserted directly. Valid examples are: </para>
+<programlisting><![CDATA[<value type="string" name="(angle)" /> 
+<value type="fixed-string" name="none" /> 
+<value type="fixed-string" name="red" />]]></programlisting>
+<para> In the first example a dialog named &ldquo;<emphasis>(angle)</emphasis>&rdquo; will be used to drive property's value insertion. In the second and third ones, the values <emphasis>none</emphasis> and <emphasis>red</emphasis> will be directly inserted as valid property's value. </para>
+<para>A complete example of <application>cssed</application> configuration file can be:</para>
+<programlisting><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+<csssed-def implementation="CSS-2"> 
+<element name="azimuth">
+<value type="string" name="(angle)" /> 
+<value type="fixed-string" name="none" /> 
+</element>
+</cssed-def>]]></programlisting>
+</sect1>
+
+<sect1 id="configuration-dtd-definition">
+<title>DTD</title>
+<para>The Document Type Definition of the cssed-def.xml file is the following:</para>
+<programlisting><![CDATA[<!ELEMENT csssed-def ( element+ ) >
+<!ATTLIST csssed-def implementation NMTOKEN #REQUIRED >
+	
+<!ELEMENT element ( value+ ) >
+<!ATTLIST element name ID #REQUIRED >
+	
+<!ELEMENT value EMPTY >
+<!ATTLIST value name CDATA #REQUIRED >
+<!ATTLIST value type ( fixed-string | string ) #REQUIRED >]]></programlisting>
+</sect1>
+
+<sect1 id="configuration-builtins-dialogs">
+<title>Built in dialogs</title>
+<para> There are some dialogs that can be used right now in the css definition file. Below you will find a list of them. The dialog name is between parenthesis - as it must be in the definition file itself - the <emphasis>&ldquo;Url&rdquo;</emphasis> points to the page of the CSS2 specification that defines the dialog's value, and the <emphasis>&ldquo;Used by&rdquo;</emphasis> field lists the properties that use this dialog. </para>
+<itemizedlist>
+<listitem>
+<para><keycap>(angle)</keycap>: insert an angle.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/syndata.html#value-def-angle">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-angle</ulink></para>
+<para><keycap>Used by: </keycap><emphasis>azimuth</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(attr)</keycap>: insert the content of one tag's attribute.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/generate.html&num;propdef-content">http://www.w3.org/TR/CSS2/generate.html&num;propdef-content</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>content</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(background)</keycap>: let you select various values to a <emphasis>background</emphasis> property.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/colors.html#propdef-background">http://www.w3.org/TR/CSS2/colors.html&num;propdef-background</ulink></para>
+<para> <keycap>Used by:</keycap> <emphasis>background</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(border)</keycap>: add value to a <emphasis>border</emphasis> property. Set the value for all borders.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/box.html#propdef-border">http://www.w3.org/TR/CSS2/box.html&num;propdef-border</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>border</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(border-width)</keycap>:  add the width to one border.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/box.html#propdef-border">http://www.w3.org/TR/CSS2/box.html&num;propdef-border</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>border-top-width</emphasis>, <emphasis>border-right-width</emphasis>, <emphasis>border-bottom-width</emphasis>, and <emphasis>border-left-width</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(border-width-style-color)</keycap>: set the width style and color of one border.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/box.html#propdef-border">http://www.w3.org/TR/CSS2/box.html&num;propdef-border</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>border-top</emphasis>, <emphasis>border-right</emphasis>, <emphasis>border-bottom</emphasis>, <emphasis>border-left</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(increment-reset)</keycap>: set/reset the increment of a <emphasis>counter</emphasis> property.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/generate.html#counters">http://www.w3.org/TR/CSS2/generate.html&num;counters</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>counter-increment</emphasis>, <emphasis>counter-reset</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(counter)</keycap>: set a counter to a <emphasis>content</emphasis> property.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/generate.html#counters">http://www.w3.org/TR/CSS2/generate.html&num;counters</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>content</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(string)</keycap>: add a string as value for a property.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/syndata.html#value-def-string">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-string</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis> content</emphasis>, <emphasis>quotes</emphasis>, and <emphasis>text-align</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(uri)</keycap>: set a url as value for a property with the <emphasis>url() </emphasis>function.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/syndata.html#value-def-uri">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-uri</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>background-image</emphasis>, <emphasis>image</emphasis>, <emphasis>content</emphasis>, <emphasis>cue</emphasis>, <emphasis>cue-after</emphasis>, <emphasis>cue-before</emphasis>, <emphasis>cursor</emphasis>, and <emphasis>list-style-image</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(font)</keycap>: fill in the values of one border property.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/box.html#border-properties">http://www.w3.org/TR/CSS2/box.html&num;border-properties</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>border</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(font-family)</keycap>: set the font's family.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/fonts.html#propdef-font-family">http://www.w3.org/TR/CSS2/fonts.html&num;propdef-font-family</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>font-family</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(font-size)</keycap>: set the size of a font.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/fonts.html#propdef-font-size">http://www.w3.org/TR/CSS2/fonts.html&num;propdef-font-size</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>font-size</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(identifier)</keycap>: set an identifier as value for a property.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/syndata.html#value-def-identifier">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-identifier</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>page</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(integer)</keycap>: add an integer number value to a property.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/syndata.html#value-def-integer">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-integer</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>windows</emphasis>, <emphasis>z-index</emphasis>, <emphasis>font-size-adjust</emphasis>, and <emphasis>orphans</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(length)</keycap>: set a length as value for a property.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/syndata.html#value-def-length">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-length</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>marker-offset</emphasis>, and <emphasis>word-spacing</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(list-style)</keycap>: set the style of the markers in a list. It can be numerical, graphical, or alphabetical.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/generate.html#propdef-list-style">http://www.w3.org/TR/CSS2/generate.html&num;propdef-list-style</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>list-style</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(margin)</keycap>: set all margin values (top, left, bottom and right).</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/box.html#propdef-margin">http://www.w3.org/TR/CSS2/box.html&num;propdef-margin</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>margin</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(margin-width)</keycap>: set the width of one margin.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/box.html#value-def-margin-width">http://www.w3.org/TR/CSS2/box.html&num;value-def-margin-width</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>margin-top</emphasis>, <emphasis>margin-right</emphasis>, <emphasis>margin-bottom</emphasis>, and <emphasis>margin-left</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(number)</keycap>: set a real number as value for a property. It is used by aural properties.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/syndata.html#value-def-number">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-number</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>pitch-range</emphasis>, <emphasis>richness</emphasis>, <emphasis>speech-rate</emphasis>, <emphasis>stress</emphasis>, and <emphasis>volume</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(padding)</keycap>: set all paddings in a box element.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/box.html#propdef-padding">http://www.w3.org/TR/CSS2/box.html&num;propdef-padding</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>padding</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(pause)</keycap>: set a pause in an aural property.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/aural.html#propdef-pause">http://www.w3.org/TR/CSS2/aural.html&num;propdef-pause</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>pause</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(percentage)</keycap>: set a percentage as value for a property.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/syndata.html#value-def-percentage">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-percentage</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>pause</emphasis>, and <emphasis>volume</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(percentage-length)</keycap>: it is used by properties that can take as value one percentage or a numerical length.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/syndata.html#values">http://www.w3.org/TR/CSS2/syndata.html&num;values</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>right</emphasis>, <emphasis>text-indent</emphasis>, <emphasis>top</emphasis>, <emphasis>width</emphasis>, <emphasis>vertical-align</emphasis>, <emphasis>background-position</emphasis>, <emphasis>border</emphasis>, <emphasis>bottom</emphasis>, <emphasis>height</emphasis>, <emphasis>max-height</emphasis>, <emphasis>max-width</emphasis>, <emphasis>min-height</emphasis>, <emphasis>min-width</emphasis>, <emphasis>padding-top</emphasis>, <emphasis>padding-right</emphasis>, <emphasis>padding-bottom</emphasis>, and <emphasis>padding-left</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(play-during)</keycap>: set a sound to be played and the repeat or mixing properties of this sound, in aural style sheets.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/aural.html#propdef-play-during">http://www.w3.org/TR/CSS2/aural.html&num;propdef-play-during</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>play-during</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(quotes)</keycap>: set what characters will be used as quotes. Commonly used to set the quotes based in the language being used. It works with the <emphasis>content</emphasis> property when it sets its values to <emphasis>open-quote</emphasis> or <emphasis>close-quote</emphasis>.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/generate.html#propdef-quotes">http://www.w3.org/TR/CSS2/generate.html&num;propdef-quotes</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>quotes</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(shape)</keycap>: set the rectangle of a <emphasis>clip</emphasis> property, with the <emphasis>rect()</emphasis> function.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/visufx.html#value-def-shape">http://www.w3.org/TR/CSS2/visufx.html&num;value-def-shape</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>clip</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(size-length)</keycap>: it is used by properties that can get as value a size number, or a length identified by a number and the unit used to define the length.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/syndata.html#values">http://www.w3.org/TR/CSS2/syndata.html&num;values</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>size</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(text-shadow)</keycap>: set the x and y offset and blur of a shadow in the text.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/text.html#propdef-text-shadow">http://www.w3.org/TR/CSS2/text.html&num;propdef-text-shadow</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>text-shadow</emphasis>.</para>
+</listitem>
+<listitem>
+<para><keycap>(voice-family)</keycap>: add a voice set, and generic voice family to aural style sheets.</para>
+<para><keycap>Url</keycap>: <ulink url="http://www.w3.org/TR/CSS2/aural.html#propdef-voice-family">http://www.w3.org/TR/CSS2/aural.html&num;propdef-voice-family</ulink></para>
+<para><keycap>Used by:</keycap> <emphasis>voice-family</emphasis>. </para>
+</listitem>
+</itemizedlist>
+</sect1>
+</chapter>

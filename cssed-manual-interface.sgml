@@ -1,0 +1,764 @@
+<chapter id="interface">
+<title>User interface</title>
+<para>This section describes the interface of <application>cssed</application>. For description of plugins interface, see <xref linkend="Plugins">.</para>
+
+<sect1 id="interface-description">
+<title>Description</title>
+<para><figure float="0" id="figure-cssed-ui-small">
+<title id="figure-cssed-ui-small-title"><application>cssed</application> user interface</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/cssed-ui-small" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/cssed-ui-small.png" format="PNG"></imageobject>
+<textobject><phrase>The <application>cssed</application> UI</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>The <application>cssed</application> user interface is divided into three main sections:</para>
+<itemizedlist>
+<listitem>
+<para>The menu and tool bars: give quick access to the <application>cssed</application> main functions.</para>
+</listitem>
+<listitem>
+<para>The editor notebook: is located in the upper right corner of <application>cssed</application> interface and contains all editor windows.</para>
+</listitem>
+<listitem>
+<para>The side panel: Located on the right side of <application>cssed</application> interface, it comprises two tabs. The first one contains the selector scanner and the <acronym>CSS</acronym> property's tree view, the second one contains the digest.</para>
+</listitem>
+<listitem>
+<para>The program output, the scratch pad/static pad, and optionally the terminal: are in the footer of <application>cssed</application> interface.</para>
+</listitem>
+</itemizedlist>
+<para>Additionally, you will find tips just by pausing the mouse over most elements of the interface, and contextual menus are available in the document window and in the scratch pad/static pad.</para>
+</sect1>
+
+<sect1 id="interface-menu">
+<title>The menu and tool bars</title>
+<para><figure float="0" id="figure-menutoolbars">
+<title id="figure-menutoolbars-title">Menu and tool bars</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/menutoolbars" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/menutoolbars.png" format="PNG"></imageobject>
+<textobject><phrase>The <application>cssed</application> menu and tooI bars</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>The menu and tool bars are common to other editors. From the menu, you can perform most <application>cssed</application> tasks; you will use the tool bars to perform the most common ones. All menus have got menu accelerator keys, but not all items in menus.</para>
+<note><para>Mac OS X users: the menu accelerator keys are not available on your system. </para></note>
+<para>Here we will inspect the menus, and let you know the possible equivalence in the tool bars.</para>
+
+<sect2 id="interface-file-menu">
+<title>The File menu</title>
+<para><figure float="0" id="figure-filemenu">
+<title id="figure-filemenu-title">File menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/filemenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/filemenu.png" format="PNG"></imageobject>
+<textobject><phrase>The File menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>This is where you perform actions on files:</para>
+<itemizedlist>
+<listitem>
+<para>New, Open</para>
+</listitem>
+<listitem>
+<para>Close, Close all</para>
+</listitem>
+<listitem>
+<para>Revert</para>
+</listitem>
+<listitem>
+<para>Save, Save as, Save all</para>
+</listitem>
+<listitem>
+<para>Quit</para>
+</listitem>
+</itemizedlist>
+<tip><para>Those actions, but Close all, Revert, Save all, and Quit, are accessible from the first part of the main tool bar.</para></tip>
+<para><figure float="0" id="figure-maintoolbar1">
+<title id="figure-maintoolbar1-title">Equivalence of the File menu in the main tool bar</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/maintoolbar1" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/maintoolbar1.png" format="PNG"></imageobject>
+<textobject><phrase>New, Open, Save, Save as, Close from the main tool bar</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<note><para>Notice that the Close action applies to the current document.</para>
+<para>Notice also the accelerator keys for most common actions in this menu.</para></note>
+</sect2>
+
+<sect2 id="interface-edit-menu">
+<title>The Edit menu</title>
+<para><figure float="0" id="figure-editmenu">
+<title id="figure-editmenu-title">Edit menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/editmenu" format="EPS">
+</imageobject>
+<imageobject><imagedata fileref="figures/editmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The Edit menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>This is where you perform actions on documents:</para>
+<itemizedlist>
+<listitem>
+<para>Undo and Redo</para>
+</listitem>
+<listitem>
+<para>Cut, Copy, Paste and Delete</para>
+</listitem>
+<listitem>
+<para>Find, Find and Replace</para>
+</listitem>
+</itemizedlist>
+<para>In addition, this is where you access <application>cssed</application> preferences.</para>
+<tip><para>Those actions, but Delete, are accessible from the 2nd, 3rd, 4th and last part of the main tool bar.</para></tip>
+<para><figure float="0" id="figure-maintoolbar2-4">
+<title id="figure-maintoolbar2-4-title">Equivalence of the first part of the Edit menu in the main tool bar</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/maintoolbar2-4" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/maintoolbar2-4.png" format="PNG"></imageobject>
+<textobject><phrase>Cut, copy, paste, find, find and replace, undo and redo from the main tool bar</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>
+<figure float="0" id="figure-maintoolbar7">
+<title id="figure-maintoolbar7-title">Equivalence of the last part of the Edit menu in the main tool bar</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/maintoolbar7" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/maintoolbar7.png" format="PNG"></imageobject>
+<textobject><phrase>Preferences from the main tool bar</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<note><para>Once again, notice the accelerator keys for most actions in the Edit menu. Notice that <keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo> for undo works, though not signaled in the menu.</para></note>
+</sect2>
+
+<sect2 id="interface-view-menu">
+<title>The View menu</title>
+<para><figure float="0" id="figure-viewmenu">
+<title id="figure-viewmenu-title">View menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/viewmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/viewmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The View menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>This is where you can change the visual display of the <application>cssed</application> window.</para>
+<para>From here you can:</para>
+<itemizedlist>
+<listitem>
+<para>Hide / Show the main and secondary tool bars</para>
+</listitem>
+<listitem>
+<para>Change the zoom factor of the current document</para>
+</listitem>
+<listitem>
+<para>Create, modify and load documents lists which will ease grouping and opening documents</para>
+</listitem>
+</itemizedlist>
+<para>Those actions have no equivalence in the tool bars.</para>
+</sect2>
+
+<sect2 id="interface-document-menu">
+<title>The Document menu</title>
+<para><figure float="0" id="figure-documentmenu">
+<title id="figure-documentmenu-title">Document menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/documentmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/documentmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The Document menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>All actions in this menu are related to the current document. From there, you can:</para>
+<itemizedlist>
+<listitem>
+<para>Show/hide line numbers, line endings, and white spaces</para>
+</listitem>
+<listitem>
+<para>Enable/disable line wrapping, auto completion, and folding</para>
+</listitem>
+<listitem>
+<para>Set or change the EOL mode of the current document</para>
+<para><figure float="0" id="figure-eolconvertmenu">
+<title id="figure-eolconvertmenu-title">Set or change EOL mode</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/eolconvertmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/eolconvertmenu.png" format="PNG"></imageobject>
+<textobject><phrase>Setting or changing the EOL mode of the current document</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>Fold/unfold all properties</para>
+<para><figure float="0" id="figure-foldmenu">
+<title id="figure-foldmenu-title">Folding/unfolding all properties</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/foldmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/foldmenu.png" format="PNG"></imageobject>
+<textobject><phrase>Folding/unfolding all properties</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>Apply syntax highlighting to the document, according to the type of document</para>
+<para><figure float="0" id="figure-highlightingmenu">
+<title id="figure-highlightingmenu-title">Apply highlighting</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/highlightingmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/highlightingmenu.png" format="PNG"></imageobject>
+<textobject><phrase>Apply highlighting</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>Force the encoding of the document</para>
+<para><figure float="0" id="figure-encodingmenu">
+<title id="figure-encodingmenu-title">Force encoding</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/encodingmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/encodingmenu.png" format="PNG"></imageobject>
+<textobject><phrase>Force encoding</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<warning><para>Use it with caution, and do not mix several encodings in the same document.</para></warning>
+</listitem>
+<listitem>
+<para>Change the character set</para>
+<para><figure float="0" id="figure-charsetmenu">
+<title id="figure-charsetmenu-title">Character set</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/charactersetmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/charactersetmenu.png" format="PNG"></imageobject>
+<textobject><phrase>Character set</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>Change the font of the current document.</para>
+</listitem>
+<listitem>
+<para>Change the background color of the document tab</para>
+<para><figure float="0" id="figure-tabbgcolormenu">
+<title id="figure-tabbgcolormenu-title">Tab background color</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/tabbgcolormenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/tabbgcolormenu.png" format="PNG"></imageobject>
+<textobject><phrase>Tab background color menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+</itemizedlist>
+<para>There is no equivalence for those actions in the tool bars.</para>
+</sect2>
+
+<sect2 id="interface-css-menu">
+<title>The <acronym>CSS</acronym> menu</title>
+<para><figure float="0" id="figure-cssmenu">
+<title id="figure-cssmenu-title"><acronym>CSS</acronym> menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/cssmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/cssmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The <acronym>CSS</acronym> menu</phrase></textobject>	
+</mediaobject></screenshot>
+</figure></para>
+<para>This is where you will find all the dialogs to add properties, attributes, and values to your documents, as well as validate and scan them. The menu is divided into three parts:</para>
+<itemizedlist>
+<listitem>
+<para>Dialogs, which in turn are divided into three parts:</para>
+<para><figure float="0" id="figure-cssdialogsmenu">
+<title id="figure-cssdialogsmenu-title"><acronym>CSS</acronym> Dialogs menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/cssdialogsmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/cssdialogsmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The <acronym>CSS</acronym> Dialogs menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<itemizedlist>
+<listitem>
+<para>Properties and values: This is where you will find all the <acronym>CSS</acronym> dialogs for properties and values.</para>
+<para>It contains 66 dialogs to ease <acronym>CSS</acronym> creation either aural, visual, or paged.</para>
+<para><figure float="0" id="figure-csspropertiesmenu">
+<title id="figure-csspropertiesmenu-title"><acronym>CSS</acronym> Properties and Values menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/csspropertiesmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/csspropertiesmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The <acronym>CSS</acronym> Properties and Values menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>Each item leads to another cascade of submenus, to finally end up with access to a given dialog.</para>
+<itemizedlist>
+<listitem>
+<para>Here you can see the path to the border width style and color item:</para>
+<para><figure float="0" id="figure-cssbordermenu">
+<title id="figure-cssbordermenu-title">Border width style and color item in the <acronym>CSS</acronym> menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/cssbordermenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/cssbordermenu.png" format="PNG"></imageobject>
+<textobject><phrase>Border width style and color item in the <acronym>CSS</acronym> menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+</itemizedlist>
+<tip><para>The most commonly used dialogs are replicated in the first three parts of the secondary tool bar.</para></tip>
+<note><para>Notice also the balloon help on most of the menus items to make clear which action the menu triggers.</para></note>
+<para><figure float="0" id="figure-secondtoolbar1">
+<title id="figure-secondtoolbar1-title">Equivalents of <acronym>CSS</acronym> properties and values dialogs in the secondary tool bar</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/secondtoolbar1" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/secondtoolbar1.png" format="PNG"></imageobject>
+<textobject><phrase>Equivalent of <acronym>CSS</acronym> properties and values dialogs in the secondary tool bar</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<itemizedlist>
+<listitem>
+<para>Margin all dialog</para>
+<para><figure float="0" id="figure-marginalldialog">
+<title id="figure-marginalldialog-title">Margin all dialog</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/marginalldialog" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/marginalldialog.png" format="PNG"></imageobject>
+<textobject><phrase>The Margin all dialog</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>Border all dialog</para>
+<para><figure float="0" id="figure-borderalldialog">
+<title id="figure-borderalldialog-title">Border all dialog</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/borderalldialog" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/borderalldialog.png" format="PNG"></imageobject>
+<textobject><phrase>The Border all dialog</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>Padding all dialog</para>
+<para><figure float="0" id="figure-paddingalldialog">
+<title id="figure-paddingalldialog-title">Padding all dialog</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/paddingalldialog" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/paddingalldialog.png" format="PNG"></imageobject>
+<textobject><phrase>The Padding all dialog</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>Font dialog</para>
+<para><figure float="0" id="figure-fontdialog">
+<title id="figure-fontdialog-title">Font dialog</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/fontdialog" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/fontdialog.png" format="PNG"></imageobject>
+<textobject><phrase>The Font dialog</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>Color dialog</para>
+<para><figure float="0" id="figure-colordialog">
+<title id="figure-colordialog-title">Color dialog</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/colordialog" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/colordialog.png" format="PNG"></imageobject>
+<textobject><phrase>The Color dialog</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>Common values: from there you can insert values for units, strings, and identifiers</para>
+<para><figure float="0" id="figure-csscommonmenu">
+<title id="figure-csscommonmenu-title"><acronym>CSS</acronym> Common Values menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/csscommonmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/csscommonmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The <acronym>CSS</acronym> Common Values menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>There is no equivalent for those items in the tool bars.</para>
+</listitem>
+<listitem>
+<para>Function values: those dialogs allow you to insert values for generated contents, i.e. url() and attr()</para>
+<para><figure float="0" id="figure-cssfunctionsmenu">
+<title id="figure-cssfunctionsmenu-title"><acronym>CSS</acronym> Function Values menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/cssfunctionsmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/cssfunctionsmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The <acronym>CSS</acronym> Function Values menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>There is no equivalent for this item in the tool bars.</para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>Wizards: box properties, selector, and color for complex rules</para>
+<para>This is where you go when you have complex properties to build.</para>
+<itemizedlist>
+<listitem>
+<para>The box properties wizard allows you to set values for margin, padding, border, and box size properties.</para>
+<para>It is made of three parts:</para>
+<itemizedlist>
+<listitem>
+<para>The first part details all properties, so that you can assign different values to each property.</para>
+<para><figure float="0" id="figure-boxwizard1">
+<title id="figure-boxwizard1-title">All properties in Box Properties wizard</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/boxwizard1" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/boxwizard1.png" format="PNG"></imageobject>
+<textobject><phrase>All properties in Box Properties wizard</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>The second part is devoted to shorthand properties, this way you can set the same value to any sub-property of a major property (e.g. same color to each side of a border).</para>
+<para><figure float="0" id="figure-boxwizard2">
+<title id="figure-boxwizard2-title">Shorthand properties in Box Properties wizard</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/boxwizard2" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/boxwizard2.png" format="PNG"></imageobject>
+<textobject><phrase>Shorthand properties in Box Properties wizard</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>The third part is a quick help for you to locate quickly the various concepts in a <acronym>CSS</acronym> box.</para>
+<para><figure float="0" id="figure-boxwizard3">
+<title id="figure-boxwizard3-title">Quick help in Box Properties wizard</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/boxwizard3" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/boxwizard3.png" format="PNG"></imageobject>
+<textobject><phrase>Quick help in Box Properties wizard</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>The selector wizard helps you to construct particular or general rules for:</para>
+<itemizedlist>
+<listitem>
+<para>single selectors</para>
+<para><figure float="0" id="figure-selwizsingle">
+<title id="figure-selwizsingle-title">Single selector wizard</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/selwizsingle" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/selwizsingle.png" format="PNG"></imageobject>
+<textobject><phrase>The single selector wizard</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>child selectors</para>
+<para><figure float="0" id="figure-selwizchild">
+<title id="figure-selwizchild-title">Child selector wizard</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/selwizchild" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/selwizchild.png" format="PNG"></imageobject>
+<textobject><phrase>The child selector wizard</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>class selectors</para>
+<para><figure float="0" id="figure-selwizclass">
+<title id="figure-selwizclass-title">Class selector wizard</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/selwizclass" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/selwizclass.png" format="PNG"></imageobject>
+<textobject><phrase>The class selector wizard</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>sibling selectors</para>
+<para><figure float="0" id="figure-selwizsibling">
+<title id="figure-selwizsibling-title">Sibling selector wizard</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/selwizsibling" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/selwizsibling.png" format="PNG"></imageobject>
+<textobject><phrase>The sibling selector wizard</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>contextual selectors</para>
+<para><figure float="0" id="figure-selwizcontext">
+<title id="figure-selwizcontext-title">Contextual selector wizard</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/selwizcontext" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/selwizcontext.png" format="PNG"></imageobject>
+<textobject><phrase>The contextual selector wizard</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>With the color wizard, you can set a value for any property involving color.</para>
+<para><figure float="0" id="figure-colorwizard">
+<title id="figure-colorwizard-title">Color wizard</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/colorwizard" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/colorwizard.png" format="PNG"></imageobject>
+<textobject><phrase>The Color wizard</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+</itemizedlist>
+<tip><para>There are equivalents in the secondary tool bar for those wizards.</para></tip>
+<para><figure float="0" id="figure-secontoolbar2">
+<title id="figure-secondtoolbar2-title">Equivalents of wizards in the secondary tool bar</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/secondtoolbar2" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/secondtoolbar2.png" format="PNG"></imageobject>
+<textobject><phrase>Equivalents of wizards in the secondary tool bar</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>Miscellaneous actions performed on the current document:</para>
+<itemizedlist>
+<listitem>
+<para>Validate and dump (version 0.3.1): checks if the document is well-formed and parseable by a web browser, and dumps the analysis into the program output.</para>
+</listitem>
+<listitem>
+<para>Validate only (version 0.3.1): checks if the document is well-formed and parseable by a web browser. Errors are listed in the program output tab of the footer panel.</para>
+</listitem>
+<listitem>
+<para>Scan selector (version 0.3.1): lists in the upper part of the side panel all properties and values of the selector, your mouse pointer is in. From there you can change/add values and properties.</para>
+</listitem>
+</itemizedlist>
+<tip><para>All items have equivalents in the 4th and 5th parts of the secondary tool bar.</para></tip>
+<para><figure float="0" id="figure-secondtoolbar3">
+<title id="figure-secondtoolbar3-title">Equivalents of validate and scan menu items in the secondary tool bar</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/secondtoolbar3" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/secondtoolbar3.png" format="PNG"></imageobject>
+<textobject><phrase>Equivalents of validate and scan menu items in the secondary tool bar</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+</itemizedlist>
+</sect2>
+
+<sect2 id="interface-tools-menu">
+<title>The Tools menu</title>
+<para><figure float="0" id="figure-toolsmenu">
+<title id="figure-toolsmenu-title">Tools menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/toolsmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/toolsmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The tools menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>This is where you perform actions on the current document. The menu contains the following items:</para>
+<itemizedlist>
+<listitem>
+<para>Doc info: gives some information about the current document, such as its location, its size in characters, its saved/modified state.  The output is listed in the program output tab of the footer panel.</para>
+</listitem>
+<listitem>
+<para>Show autocompletion: displays the auto completion popup menu. Mostly useful when you have disabled automatic auto completion. The popup menu appears where your mouse pointer is in the current document.
+</para>
+</listitem>
+<listitem>
+<para>Clean program output: clears the program output in the footer panel.</para>
+</listitem>
+</itemizedlist>
+<tip><para>All items, but the show autocompletion one have equivalents in the 4th part of the secondary tool bar.</para></tip>
+<para><figure float="0" id="figure-secondtoolbar4">
+<title id="figure-secondtoolbar4-title">Equivalents of tools menu items in the secondary tool bar</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/secondtoolbar4" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/secondtoolbar4.png" format="PNG"></imageobject>
+<textobject><phrase>Equivalents of tool menu items in the secondary tool bar</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</sect2>
+
+<sect2 id="interface-panels-menu">
+<title>The Panels menu</title>
+<para><figure float="0" id="figure-panelsmenu">
+<title id="figure-panelsmenu-title">Panels menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/panelsmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/panelsmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The panels menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>From there you can show/hide the side and footer panels.</para>
+<note><para>Observe that the icons which have only a blank background matches the hide action, whereas the icons with a blue rectangle matches the show action. Similarly, horizontal arrows represent the side panel, while vertical arrows represent the footer panel.</para></note>
+<tip><para>All those items have equivalents in the 6th part of the main tool bar</para></tip>
+<para><figure float="0" id="figure-maintoolbar6">
+<title id="figure-maintoolbar6-title">Equivalents of the panels menu items in the main tool bar</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/maintoolbar6" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/maintoolbar6.png" format="PNG"></imageobject>
+<textobject><phrase>Equivalents of the panels menu items in the main tool bar</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</sect2>
+
+<sect2 id="interface-plugins-menu">
+<title>The Plugins menu</title>
+<para><figure float="0" id="figure-pluginsmenu">
+<title id="figure-pluginsmenu-title">Plugins menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/pluginsmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/pluginsmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The plugins menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>From there, you access a plugins dialog window, where you can see which plugins are installed, and consequently load or unload them.</para>
+<para><figure float="0" id="figure-pluginsdialog">
+<title id="figure-pluginsdialog-title">Plugins dialog</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/pluginsdialog" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/pluginsdialog.png" format="PNG"></imageobject>
+<textobject><phrase>The plugins dialog</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<note><para>Some plugins may add new items to the plugin menu. In this case, they will be described in <xref linkend="plugins">.</para></note>
+<para>There is no equivalent in the tool bars for this menu.</para>
+</sect2>
+
+<sect2 id="interface-help-menu">
+<title>The Help menu</title>
+<para><figure float="0" id="figure-helpmenu">
+<title id="figure-helpmenu-title">Help menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/helpmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/helpmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The help menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>The About item in this menu leads to a four tabs window with information about <application>cssed</application>: author, developers, translators and their details (in translated version), and a dedicace for this release.</para>
+<important><para>The other items are only available on Mac version at the moment. They give access to the cssed web site and the online documentation. Some common browsers on this system are provided, as well as some others available on the X11 layer.</para></important>
+<para>There is no equivalent in the tool bars for this menu.</para>
+</sect2>
+
+<sect2 id="interface-bookmarks">
+<title>Navigation through bookmarks</title>
+<tip><para>With those icons you access quickly any temporary bookmark you have previously defined just by clicking in the margin in front of the line you wanted to bookmark.</para></tip>
+<para><figure float="0" id="figure-maintoolbar5">
+<title id="figure-maintoolbar5-title">Navigation through bookmarks</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/maintoolbar5" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/maintoolbar5.png" format="PNG"></imageobject>
+<textobject><phrase>Navigation through bookmarks</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<note><para>Those items are located in the fifth part of the main tool bar. They are not present in the menus.</para></note>
+</sect2>
+</sect1>
+
+<sect1 id="interface-editor">
+<title>The editor notebook</title>
+<para>The editor notebook stores all documents opened in <application>cssed</application>. It always contains a document, so if you close all documents in <application>cssed</application> a blank one will be shown.</para>
+<tip><para>When several documents are open, you can change the current document by clicking on the small tab above the document.</para></tip>
+<para><figure float="0" id="figure-notebook">
+<title id="figure-notebook-title">Editor notebook</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/notebook" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/notebook.png" format="PNG"></imageobject>
+<textobject><phrase>The Editor notebook</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</sect1>
+
+<sect1 id="interface-side-panel">
+<title>The side panel</title>
+<para><figure float="0" id="figure-sidepanel">
+<title id="figure-sidepanel-title">Side panel</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/sidepanel" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/sidepanel.png" format="PNG"></imageobject>
+<textobject><phrase>The Side panel</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>It is divided in two tabs:</para>
+<itemizedlist>
+<listitem>
+<para>The <acronym>CSS</acronym> tab, where there is specific <acronym>CSS</acronym> stuff, divided in two parts:</para>
+<itemizedlist>
+<listitem>
+<para>The selector scanner that helps in validating syntax in a single selector, and lets you edit values from the list either manually or by double-clicking on the arrows.</para>
+<para><figure float="0" id="figure-selectorscan">
+<title id="figure-selectorscan-title">Selector scanner</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/selectorscan" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/selectorscan.png" format="PNG"></imageobject>
+<textobject><phrase>The Selector scanner</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>The <acronym>CSS</acronym> tree view where all the existing CSS2 properties and values are shown and can be selected for insertion in the document by double-clicking on a value.</para>
+<para><figure float="0" id="figure-treeview">
+<title id="figure-treeview-title"><acronym>CSS</acronym> tree view</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/treeview" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/treeview.png" format="PNG"></imageobject>
+<textobject><phrase>The <acronym>CSS</acronym> tree view</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>						
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para>The Digest tab, which allows you to parse the current document by selectors.</para>
+<tip><para>It offers a convenient way to access quickly a given selector in a big document.</para></tip>
+<para><figure float="0" id="figure-digest">
+<title id="figure-digest-title">Digest</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/digest" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/digest.png" format="PNG"></imageobject>
+<textobject><phrase>The digest</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>											
+</listitem>
+</itemizedlist>
+</sect1>
+
+<sect1 id="interface-footer">
+<title>The program output, the scratch and static pads, and the terminal</title>
+<para>Those are located in the footer panel.</para>
+<itemizedlist>
+<listitem>
+<para>The program output is used to show the user information about what is happening in <application>cssed</application> while performing a given action.</para>
+<para>Here you can see the output of a validate and dump action on the current document.</para>
+<para><figure float="0" id="figure-programoutput">
+<title id="figure-programoutput-title">Program output</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/programoutput" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/programoutput.png" format="PNG"></imageobject>
+<textobject><phrase>The program output</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>The scratch pad and static pad are just text buffers to be used as a dragable clipboard from/to the editor notebook or for notes.</para>
+<para>It is divided into a temporary part: the scratch pad, and a permanent one: the static pad. Drag and drop may be performed between both pads.</para>
+<para><figure float="0" id="figure-scratpad">
+<title id="figure-scratchpad-title">Scratch and static pads</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/scratchpad" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/scratchpad.png" format="PNG"></imageobject>
+<textobject><phrase>The scratch and static pads</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+<listitem>
+<para>The terminal (optional) is very handy to perform external operations while editing a document, such as moving files, running a make, or checking the rendering in a browser.</para>
+<para>Here it is a mere ls command which has been executed.</para>
+<para><figure float="0" id="figure-terminal">
+<title id="figure-terminal-title">Terminal</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/terminal" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/terminal.png" format="PNG"></imageobject>
+<textobject><phrase>The terminal</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem>
+</itemizedlist>
+</sect1>
+</chapter>

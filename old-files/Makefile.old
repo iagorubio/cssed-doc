@@ -1,0 +1,41 @@
+# cssed-manual Makefile (c) Iago Rubio 2003-2004
+
+
+MANUAL=cssed-book
+DB=${MANUAL}.sgml
+TAR=${MANUAL}.tar
+BZIP=${MANUAL}.bz2
+
+html:	cleanhtml
+	jw -f docbook -b html -o ${MANUAL} ${DB}
+	cp -r figures ${MANUAL}
+	cp COPYING-DOCS ${MANUAL}
+
+ps: 
+	jw -f docbook -b ps ${DB}
+
+pdf:
+	jw -f docbook -b pdf ${DB}
+
+cleanhtml:
+	rm -rf ${MANUAL}
+
+cleanps:
+	rm -rf *.ps
+
+cleanpdf:
+	rm -rf *.pdf
+
+
+clean: cleanhtml cleanps cleanpdf
+
+tar:
+	tar cvf ${TAR} ${MANUAL}
+
+bzip:	tar
+	bzip2 ${TAR}
+
+tgz:	
+	tar cvzf ${TAR} ${MANUAL}
+
+all: 	tgz ps pdf

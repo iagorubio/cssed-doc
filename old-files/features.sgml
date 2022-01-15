@@ -1,0 +1,132 @@
+<!--
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook V3.1//EN">
+-->
+
+ <chapter>
+    <title>
+      Features
+    </title>
+    <para>
+      This section lists the features found in cssed and those that will not be found in cssed in the future.
+    </para>
+    <sect1>
+      <title>
+	Feature list
+      </title>
+      <para>
+	This is a list of the current features found in cssed:
+      </para>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    CSS syntax validation
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    CSS syntax highlighting
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Search and replace
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    XML based CSS definition file (easy to customize)
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Auto completion
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Dialog driven CSS property insertion
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    More than 30 dialogs for complex ( non static ) CSS properties and values
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Full CSS2 support
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Show or hide line numbers, white spaces or line endings
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Line ending conversion between Windows, Mac and Unix end-of-line characters
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Markers used as bookmarks for easily navigating through a document
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    MDI interface (notebook based)
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </sect1>
+    <sect1>
+      <title>
+	Approved feature requests
+      </title>
+      <para>
+	These will be added to cssed:
+      </para>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    CSS validation
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    CSS selector, id, class and complete style wizards
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    XML based configuration file
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </sect1>
+    <sect1>
+      <title>
+	Denied feature requests
+      </title>
+      <para>
+	These will never be added to cssed:
+      </para>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    HTML support: cssed is a CSS editor
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    VSFT/FTP transfer: I want to maintain cssed as tiny as possible, so this feature will no be implemented
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    File browser side panel: really large web projects can use from 5 to 10 CSS style sheets. Small web sites normally use one. As an example my personal page have one style sheet but 150 PHP files and 90 HTML files. I'm sure there's no need for a file browser panel in a CSS editor.
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </sect1>
+  </chapter>

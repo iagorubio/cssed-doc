@@ -1,0 +1,118 @@
+<chapter id="install">
+<title>Installation</title>
+<para> You can download the latest version of <application>cssed</application> from <ulink url="http://sourceforge.net/projects/cssed">Source Forge's Project page</ulink> or from the <ulink url="http://cssed.sourceforge.net"><application>cssed</application> site</ulink>. </para>
+<para>From both sites, you can download it in binary (compiled) or source form.</para>
+
+<sect1 id="install-easy">
+<title>Easy installation</title>
+<para>Here are the instructions to install <application>cssed</application> either from binary or source within a package manager system.</para>
+
+<sect2 id="install-rpm">
+<title>RPM Users</title>
+
+<sect3 id="install-rpm-binary">
+<title>Binary installation</title>
+<para>To install a binary RPM of <application>cssed</application>, you need to download the latest RPM package (named <filename>cssed-VERSION-BUILD.rpm</filename>) and use the following commands as root:</para>
+<para><computeroutput>rpm -ivh cssed-VERSION-BUILD.rpm</computeroutput></para>
+</sect3>
+
+<sect3 id="install-rpm-apt">
+<title>Apt or Yum RPM installation</title><para>To install cssed RPMs via apt or yum, take a look at the <ulink url="http://dag.wieers.com/home-made/apt/FAQ.php">instructions on Dag's repository</ulink>, especially the instructions on <ulink url="http://dag.wieers.com/home-made/apt/FAQ.php#B1">how to use the repository</ulink>.</para><para>Once configured your prefered package manager, you only need to issue those commands to install <application>cssed</application> on your system:</para><para><computeroutput>yum install cssed</computeroutput></para><para>Or:</para><para><computeroutput>apt-get cssed</computeroutput></para></sect3></sect2>
+
+<sect2 id="install-debian">
+<title>Debian users</title>
+<para> Debian users must download the *.deb file called <filename>cssed_VERSION_ARCH.deb</filename> and use the command: </para>
+<para><computeroutput>dpkg --install cssed_VERSION_ARCH.deb</computeroutput></para>
+</sect2>
+
+<sect2 id="install-gentoo">
+<title>Gentoo users</title>
+<para>Gentoo users have no need to perform any of the steps above, just use the command:</para>
+<para><computeroutput>emerge cssed</computeroutput></para>
+<para> You can get further information at the <ulink url="http://www.gentoo.org/doc/en/portage-user.xml">portage site</ulink>.</para>
+</sect2>
+
+<sect2 id="install-mac">
+<title>Mac OS X users</title>
+<para>The package is available via <ulink url="http://fink.sourceforge.net/">Fink</ulink>.</para>
+<para>As of version 0.3.0, <application>cssed</application> will no more be updated on the 10.2.x tree, the 0.2.1 release remains available for 10.2.x users in the unstable branch. For 10.3.x users it is available in both source and binary form (when updated), with the usual delay of two months before it is available on the stable tree, provided that all required dependencies are in that tree.</para>
+<procedure id="proc-install-bin-osx">
+<title>To install the binary on Mac OS X:</title>
+<step><para>Install Apple's X11, or the appropriate XFree86/Xorg packages, be it the case.</para></step>
+<step>
+<para>Open a terminal and type:</para>
+<para><computeroutput>sudo apt-get update</computeroutput> to update the packages list.</para></step>
+<step><para>Enter your password when asking for, then install <application>cssed</application> with:</para>
+<para><computeroutput>sudo apt-get install cssed</computeroutput></para></step>
+</procedure>
+<procedure id="proc-compile-source-osx">
+<title>To compile the source on Mac OS X:</title>
+<step><para>Install Apple's X11 and X11SDK, or the appropriate XFree86/Xorg packages, be it the case.</para></step>
+<step>
+<para>Enable Fink unstable tree (you may use the stable tree on the 10.3 branch)</para>
+<substeps><step><para>Open a terminal and type:</para>
+<para><computeroutput>sudo pico /sw/etc/fink.conf</computeroutput></para></step>
+<step><para>Enter your password when asking for, change the Trees lines as follows:</para>
+<para><computeroutput>Trees: local/main stable/main unstable/main stable/crypto unstable/crypto local/bootstrap</computeroutput></para></step>
+<step><para>Save the result (be aware that the above line should not be split).</para></step></substeps></step>
+<step><para>Update your Fink installation with:</para>
+<para><computeroutput>fink selfupdate</computeroutput></para></step>
+<step><para>Install <application>cssed</application>:</para>
+<para><computeroutput>fink install cssed</computeroutput></para></step></procedure>
+</sect2>
+	
+<sect2 id="install-windows">
+<title>Windows users</title><para>You need to install GTK-2.2 or GTK-2.4 runtime libraries, prior to install <application>cssed</application>.</para><para>The better place to download the GTK runtime libraries is at <ulink url="http://gimp-win.sourceforge.net/">gimp-win home page</ulink></para><para>Once installed, pick the <filename>cssed-$VERSION-win32.exe</filename> file from the <ulink url="http://sourceforge.net/projects/cssed">Source Forge project's page</ulink>, double click on it and follow the instruction provided by the application's installer.</para></sect2>
+</sect1>
+
+<sect1 id="building-from-source">
+<title>Building <application>cssed</application> from source</title>
+<procedure id="proc-build-from-source">
+<title>To install <application>cssed</application> from source:</title>
+<step><para>Download the tarball package (named <filename>cssed-VERSION-BUILD.tar.gz</filename>).</para></step>
+<step><para>Uncompress it with the command:</para>
+<para><computeroutput>tar xfz cssed-VERSION-BUILD.tar.gz</computeroutput></para></step>
+<step><para>Once this has been done, you must move to the created directory.</para></step>
+<step><para>To install <application>cssed</application> type <command>./configure</command>, <command>make</command> and <command>make install</command> to install the standard version of <application>cssed</application> on your system.</para></step></procedure>
+
+<sect2 id="configure-options">
+<title>Configure options</title>
+<para>Here are the non standard configure options:</para>
+<para><option>--with-terminal</option> : Adds an ( experimental and unfinished ) terminal window to the footer notebook. </para>
+<para><option>--with-ipc-queue</option> : Adds an ipc queue for open signals (when available on the system).</para>
+<para><option>--with-help-menus</option> : Adds a submenu item to the help menu to access the <application>cssed</application> web site and the online documentation.</para>
+<para><option>--with-debugging-output</option> : This is for testers to put on the standard output lots of debugging information. It decreases speed so it is not recommended if you are not a tester. </para>
+<important><para>Mac OS X users: you are invited to consult the section <ulink url="http://fink.sourceforge.net/faq/usage-general.php?#compile-myself">How to compile myself</ulink> on the Fink's web site.</para></important>
+</sect2>
+</sect1>
+
+<sect1 id="building-from-cvs">
+<title>Building from CVS</title>
+<para> You can get the latest development version of cssed, following the instructions at the <ulink url="http://sourceforge.net/projects/cssed">Source Forge's Project page</ulink>. </para>
+<para>Once you have got a working checkout of <application>cssed</application> from CVS, you can update it with the command:</para>
+<para><computeroutput>cvs update</computeroutput></para>
+<para>Take into account that each time new files are added some builds script may change. If your build script stops working after a CVS update, you can rebuild it with two scripts in the root folder of the <application>cssed</application> distribution:</para>
+<itemizedlist>
+<listitem>
+<para>autogen.sh: it uses a sort of brute force rebuilding every build script in the source tree.</para>
+</listitem>
+<listitem>
+<para>bootstrap: it tries to rebuild only the needed files.</para>
+</listitem>
+</itemizedlist>
+<para>To run it, simply cd into the root <application>cssed</application> distribution folder and type:</para>
+<para><computeroutput>./autogen.sh</computeroutput></para>
+<para>or:</para>
+<para><computeroutput>./bootstrap</computeroutput></para>
+<para>Both work and choosing one of them is up to you.</para>
+<warning><para>Mac OS X users: do not to use bootstrap as it may mess up the source tree. </para></warning>
+</sect1>
+
+<sect1 id="install-plugins">
+<title>Plugins installation</title>
+<para>You can download the plugins from the <ulink url="http://cssed.sourceforge.net"><application>cssed</application> site</ulink>.</para>
+<para>The <application>cssed-plugindoc-plugin</application> is available <ulink url="http://micmacfr.homeunix.org/cssed/cssed-plugindoc-plugin-0.1.tar.gz">here</ulink>. For Mac OS X users, it is in the Fink distribution.</para>
+<para>Plugins installation is done the same way the main application is. You should have <application>cssed</application> installed beforehand.</para>
+<note><para>Mac OS X users: you can install plugins without <application>cssed</application> installed, the built process will install it for you.</para></note>
+</sect1>
+</chapter>

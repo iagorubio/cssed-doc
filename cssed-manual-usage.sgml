@@ -1,0 +1,414 @@
+<chapter id="usage">
+<title>Using <application>cssed</application></title>
+<para>I will explain here how to use <application>cssed</application> ... Well ... Really I will explain how I use it. As in any other application there are various ways to perform editing tasks, and mine is not mandatory. I am sure when you will know <application>cssed</application> you will run it the way you think fit, so just read this if you do not know how to work with <application>cssed</application>, or you feel lost when working with it.</para>
+
+<sect1 id="usage-launching">
+<title>Launching <application>cssed</application></title>
+<para>You can launch <application>cssed</application> from:</para>
+<itemizedlist>
+<listitem>
+<para>the command line with:</para>
+<itemizedlist>
+<listitem>
+<para><computeroutput>cssed</computeroutput></para>
+<para>This will launch <application>cssed</application> and open a new document in <application>cssed</application>.</para>
+</listitem>
+<listitem>
+<para><computeroutput>cssed foo</computeroutput></para>
+<para>This will launch <application>cssed</application> and open the file <filename>foo</filename> from within <application>cssed</application>.</para>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<para><acronym>GNOME</acronym>, by <mousebutton>clicking</mousebutton> on the <application>cssed</application> icon, providing that you have customized <acronym>GNOME</acronym> panel to add a launcher for <application>cssed</application>.</para>
+</listitem>
+<listitem>
+<para><acronym>KDE</acronym>, by <mousebutton>clicking</mousebutton> on the <application>cssed</application> icon, provided that you have customized the <acronym>KDE</acronym> menu to include <application>cssed</application> in, say, Development submenu, and added <application>cssed</application> to the applications launcher.</para>
+</listitem>
+<listitem>
+<para>the <application>Nautilus</application> manager, by dragging and dropping a file onto <application>cssed</application> notebook editor, providing that you have at least version 2.2 of <acronym>GNOME</acronym> installed.</para>
+</listitem>
+<listitem>
+<para><application>Emacs</application>/<application>XEmacs</application>, providing you have installed the <command>emacs launcher</command> you will find on the <ulink url="http://cssed.sourceforge.net/extras.php"><application>cssed</application> web site</ulink>.</para>
+</listitem>
+</itemizedlist>
+</sect1>
+
+<sect1 id="usage-configure">
+<title>Configuring <application>cssed</application></title>
+<para>See <xref linkend="configuration-dialog">.</para>
+</sect1>
+
+<sect1 id="usage-editor">
+<title>The editor window</title>
+<para><figure float="0" id="figure-multiplefiles">
+<title id="figure-multiplefiles-title">Several files open in the editor window</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/multiplefiles" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/multiplefiles.png" format="PNG"></imageobject>
+<textobject><phrase>Several files open in the editor window</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>The editor window is the <application>cssed</application> documents container. Any document open in <application>cssed</application>, will own an editor window where you can see, and change document contents.</para>
+<para>Each open document is displayed in a <guilabel>tab</guilabel> at the top of <application>cssed</application> editor window. If there are several open documents, and there is no more room for tabs, the new tab will be hidden and two small buttons facing <guilabel>right</guilabel> and <guilabel>left</guilabel>, will appear on the right side of the documents tabs. With those two buttons you can browse through all open documents.</para>
+<note><para>If you get gtk 2.4.9 and above installed, you will notice that the small arrows are no more grouped together. To retrieve a more efficient usage in all applications, you may want to customize gtk by creating or modifying the .gtkrc file in your home directory. Here is how to do this on Mac (the name of the rc file may vary on other system, but the lines to insert are the same):</para>
+<procedure id="proc-get-grouped-arrows"><title id="proc-get-grouped-arrows-title">Getting grouped arrows</title>
+<step><para>Open the <filename>.gtkrc-2.0</filename> file in a terminal window with pico: </para>
+<para><computeroutput>pico .gtkrc-2.0</computeroutput></para></step>
+<step><para>Put those lines in it:</para>
+<para><computeroutput>style "default"</computeroutput></para>
+<para><computeroutput>{</computeroutput></para>
+<para><computeroutput> GtkNotebook::has_secondary_forward_stepper = 1</computeroutput></para>
+<para><computeroutput> GtkNotebook::has_secondary_backward_stepper = 1</computeroutput></para>
+<para><computeroutput>}</computeroutput></para>
+<para><computeroutput>class "GtkWidget" style "default"</computeroutput></para>
+</step>
+</procedure>
+</note>
+<tip><para>A quicker access is provided by the contextual pop-up menu, which opens when you <mousebutton>right-click</mousebutton> on a tab. It displays all the open tabs in <application>cssed</application>, and you can choose any of them to make it the active document.</para></tip>
+<para><figure float="0" id="figure-popupmenu">
+<title id="figure-popupmenu-title">The editor window contextual menu</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/popupmenu" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/popupmenu.png" format="PNG"></imageobject>
+<textobject><phrase>The editor window contextual menu</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<para>The path to the current document appears in the <application>cssed</application> window title bar, providing that an existing document has been opened or a new document has been saved.</para>
+
+<sect2 id="usage-setting-document-preferences">
+<title>Setting document preferences</title>
+<para>Apart from the global settings (discussed in <xref linkend="configuration-dialog">), each document open in <application>cssed</application> can have its own preferences and behave in a different way. The Document menu shows and lets you set the current document settings. This menu changes each time you switch to another document to reflect its current settings.</para>
+<variablelist><title>Here are the settings you can set:</title>
+<varlistentry><term>View line numbers</term>
+<listitem><para>On activation, the line numbers are shown in the right margin of <application>cssed</application>.</para></listitem></varlistentry>
+<varlistentry><term>View line endings</term>
+<listitem><para>On activation, the end of line characters are made visible. It is useful to know what kind of document you are editing Unix (LF), Mac (CR) or DOS/Windows (CR and LF).
+<footnote>
+<para> The acronyms used to name end of lines are: </para>
+<itemizedlist>
+<listitem>
+<para> CR - Carriage Return</para>
+</listitem>
+<listitem>
+<para> LF - Line Feed</para>
+</listitem>
+<listitem>
+<para> CR/LF - Uses both characters Carriage Return and Line Feed</para>
+</listitem>
+</itemizedlist>
+</footnote>
+</para>
+</listitem></varlistentry>
+<varlistentry><term>View white spaces</term>
+<listitem><para>On activation, the white space characters are shown in a graphical way.</para>
+</listitem></varlistentry>
+<varlistentry><term>View lines wrapped </term>
+<listitem><para>On activation, when the lines are larger than the editor window width, they are wrapped at the right margin and continue at the left margin. In this mode the horizontal scroll bar is never shown.</para>
+</listitem></varlistentry>
+<varlistentry><term>Enable autocompletion</term>
+<listitem><para>On enabling, auto completion is enabled for the current document. It allows you to choose quickly properties and values from a popup menu. More on this thema in <xref linkend="usage-auto-completion">.</para>
+</listitem></varlistentry>
+<varlistentry><term>Enable folding</term>
+<listitem><para>On enabling, a <keycap>-</keycap> appears in the left margin and all properties are unfold. Clicking on it switches the <keycap>-</keycap> to a <keycap>+</keycap>, and fold the given property; you unfold it again by clicking on the <keycap>+</keycap>. You can also fold/unfold all properties from the item folding within the Document menu. When you disable folding again, the properties are automatically unfold.</para>
+<para><figure float="0" id="figure-foldingall">
+<title id="figure-foldingall-title">Folding all on the current document</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/foldingall" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/foldingall.png" format="PNG"></imageobject>
+<textobject><phrase>Folding all on the current document</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem></varlistentry>
+<varlistentry><term>Set EOL mode</term>
+<listitem><para>This entry converts the end of line characters between the most commonly used types. You can convert a Windows document in a Unix one for example.</para>
+</listitem></varlistentry>
+<varlistentry><term>Highlighting</term>
+<listitem><para>This entry allows you to change the syntax highlighting chosen by <application>cssed</application> (based on the file extension) once the file is open.</para>
+<para>The syntax highlighting for <acronym>CSS</acronym> files is based on what is set in preferences (see  <xref linkend="configuration-dialog">). For other files it is hard-coded at the time being, but will be configurable in a future release).</para>
+<para>Here you can see a shell script highlighted:</para>
+<para><figure float="0" id="figure-highlightingsh">
+<title id="figure-highlightingsh-title">Highlighting 	a shell script</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/highlightingsh" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/highlightingsh.png" format="PNG"></imageobject>
+<textobject><phrase>Highlighting a shell script</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+</listitem></varlistentry>
+<varlistentry><term>Force encoding</term>
+<listitem><para>The default encoding for new document is <acronym>UTF-8</acronym>. You can force the encoding either for a new document or for an already existing document. See <xref linkend="usage-force-encodings"> for an in-depth discussion.</para>
+</listitem></varlistentry>
+<varlistentry><term>Character set</term>
+<listitem><para>This menu is aimed at people who need to deal with Asian languages. Some explanation about its functionalities will be found in <xref linkend="usage-character-set">.</para>
+</listitem></varlistentry>
+<varlistentry><term>Change Font</term>
+<listitem><para>This entry lets you change the font for the current document.</para>
+</listitem></varlistentry>
+</variablelist>
+<important><para>Remember that when you change the document settings, they are only changed for the current document.</para></important>
+<para>You can see below the document settings in action.</para>
+<para><figure float="0" id="figure-documentsettings">
+<title id="figure-documentsettings-title">Document settings in action</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/documentsettings" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/documentsettings.png" format="PNG"></imageobject>
+<textobject><phrase>Document settings in action</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para>
+<note><para>Note line numbers, folding enabled, line endings set to Unix though made on a Mac, lines wrapping, white spaces (... for spaces, arrows for tabulations), and highlighting.</para></note>
+</sect2>
+
+<sect2 id="usage-auto-completion">
+<title>Auto completion</title>
+<para>Auto completion is one of the most used features in <application>cssed</application>. It lets you start typing a property name and see all possible completions. Once you have selected a property, you can apply it one of its values from a pop menu.</para>
+<para> To use auto completion, you should first activate it in the Document menu (See <xref linkend="usage-setting-document-preferences">). </para>
+<procedure id="proc-usage-autocomplete">
+<title>Usage of autocompletion</title>
+<step><para>Type the declaration name and the opening curly brace.</para>
+<para>As soon as you will type the opening brace, you will be presented with the list of all possible <acronym>CSS</acronym> properties.</para>
+<para><mediaobject>
+<imageobject><imagedata fileref="figures/autocompletion-1" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/autocompletion-1.png" format="PNG"></imageobject>
+<textobject><phrase>Type the name of declaration and the opening curly brace.</phrase></textobject>
+</mediaobject></para>
+</step>
+<step><para>Use one of the following techniques to search for the desired property:</para>
+<substeps>
+<step>
+<para>Type the first letters of the property, if you know it. The list will scroll up or down automatically to the properties whose names begin with the given letters.</para>
+<para><mediaobject>
+<imageobject><imagedata fileref="figures/autocompletion-2" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/autocompletion-2.png" format="PNG"></imageobject>
+<textobject><phrase>You will be presented with the list of all possible CSS properties.</phrase></textobject>
+</mediaobject></para>
+</step>
+<step>
+<para>Use the scrollbar to navigate the list.</para>
+</step>
+</substeps></step>
+<step><para>Select the desired property by:</para>
+<substeps><step><para>either <mousebutton>double-clicking</mousebutton> on it</para></step>
+<step><para>or <mousebutton>clicking</mousebutton> on it and press <keycap>return</keycap></para></step></substeps>
+<para>The property will be written in the document.</para>
+<para><mediaobject>
+<imageobject><imagedata fileref="figures/autocompletion-3" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/autocompletion-3.png" format="PNG"></imageobject>
+<textobject><phrase>Type the first letters of the property.</phrase></textobject>
+</mediaobject></para>
+</step>
+<step><para>Once the property is written in the document, type the sentence separator character <keycap>:</keycap>, a pop menu with the possible values for this property will be shown. You can then select the desired value the same way you did it for the property with the auto completion list.</para>
+<para><mediaobject>
+<imageobject><imagedata fileref="figures/autocompletion-4" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/autocompletion-4.png" format="PNG"></imageobject>
+<textobject><phrase>Choose the desired value from the popup menu.</phrase></textobject>
+</mediaobject></para>
+<note><para>A value embedded in parentheses leads to a dialog. Just <mousebutton>click</mousebutton> on it to access the dialog, fill it in, and <mousebutton>click</mousebutton> on <keycap>OK</keycap>.</para>
+</note></step>
+<step><para>Type a <keycap>;</keycap> to complete the process.</para></step>
+<step><para>When you have added all the properties you want to the declaration, hit the <keycap>Esc</keycap> key to hide the autocompletion list and use the combination keys <keycombo><keycap>Ctrl</keycap><keycap>l</keycap></keycombo> to delete the new line added by <application>cssed</application>. See the explanation in <xref linkend="usage-autocompletion-annoyances">.</para></step>
+</procedure>
+<note><para>If you choose a value by error, just delete it as well as the sentence separator character <keycap>:</keycap>, and enter the sentence separator character <keycap>:</keycap> again to trigger the value's pop menu.</para></note>
+<para>To quickly switch auto completion on and off, you can use the accelerator key <keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>a</keycap></keycombo>. With this accelerator key you can use auto completion for a single item, and then toggle it again to off.</para>
+<para>Some users do not like the auto completion cycle. To let them use just the auto completion list, the accelerator keys <keycombo><keycap>Alt</keycap><keycap>T</keycap><keycap>a</keycap></keycombo> will show this list even if auto completion is disabled for the current document. No trigger key will be further used to show the auto completion list, or auto completion menu if auto completion is disabled in the current document, even if you start the auto completion cycle showing the list with <keycombo><keycap>Alt</keycap><keycap>T</keycap><keycap>a</keycap></keycombo>.</para>
+<important><para>Mac OS X users: remember you cannot use accelerator keys.</para></important>
+</sect2>
+
+<sect2 id="usage-autocompletion-annoyances">
+<title>Auto completion annoyances</title>
+<para>The auto completion is not finished yet, and there are some situations where it can be annoying to the user. The auto completion list is shown each time the opening brace is typed. This way when you type a media at-rule - for example - the auto completion list is shown even when a property into this at-rule is bad CSS.</para>
+<tip><para>Use the <keycap>Esc</keycap> key to hide the auto completion list at any time.</para></tip>
+<para> The auto completion pop menu works by reading the word from the start of the line to the sentence separator, and looking for a matching string in the <acronym>CSS</acronym> tree view (View: <xref linkend="usage-treeview">). This way it only will work with <acronym>CSS</acronym> formated with a sentence per line and not when you put various sentences in the same line, even when it is valid <acronym>CSS</acronym>. </para>
+<para>To get auto completion to work with those requirements, <application>cssed</application> always adds an end of line character when you type the sentence end character <keycap>;</keycap>.</para>
+<para>This way - when using auto completion - you always must delete the last line added by <application>cssed</application>.</para>
+<tip><para>To do it quickly use the accelerator keys
+<keycombo><keycap>Ctrl</keycap><keycap>l</keycap></keycombo>.</para></tip>
+<para>You can also use <keycombo><keycap>Alt</keycap><keycap>;</keycap></keycombo> instead of <keycap>;</keycap> to avoid to continue the auto completion cycle.</para>
+</sect2>
+
+<sect2 id="usage-select-textblocks">
+<title>Selecting blocks of text</title>
+<para>In <application>cssed</application>, there are multiple ways of selecting blocks of text.</para>
+<variablelist><title>Kind of blocks</title>
+<varlistentry><term>Any chunk of text</term>
+<listitem><para>Push the <mousebutton>left</mousebutton> mouse button, select the block with the mouse, and release the button. </para></listitem></varlistentry>
+<varlistentry><term>A whole line</term>
+<listitem>
+<para>Move the mouse pointer to the beginning of the line (the cursor changes to a pointer) and <mousebutton>click</mousebutton>.</para>
+<para>Or:</para>
+<para><mousebutton>Click</mousebutton> on a line number, provided that you have activated the line numbers (See <xref linkend="usage-setting-document-preferences">).</para>
+</listitem></varlistentry>
+<varlistentry><term>Multiple lines</term>
+<listitem><para>Put the cursor at the start of the text to be selected, push the <keycap>Shift</keycap> key and <mousebutton>click</mousebutton> on the line number you want to be the end of block.</para></listitem></varlistentry>
+<varlistentry><term>The whole text</term>
+<listitem><para>Use <keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo>.</para>
+<para>Or:</para>
+<para>Push <keycap>Ctrl</keycap> and <mousebutton>click</mousebutton> on any number in the margin, provided that you have activated the line numbers (See <xref linkend="usage-setting-document-preferences">).</para></listitem></varlistentry></variablelist>
+</sect2>
+
+<sect2 id="usage-indent-textblocks">
+<title>Indenting blocks of text</title>
+<para>In <application>cssed</application> the behavior of the tab key when indenting a selected text block differs if there is one line of text selected, or if the block of text selected contains multiple lines:</para>
+<itemizedlist>
+<listitem>
+<para>When one line is selected, the <keycap>Tab</keycap> key deletes this line and adds a tab character.</para>
+<tip><para>To indent a single line, move the mouse pointer before it and then use the <keycap>Tab</keycap> key. It takes the end of line character into account.</para></tip>
+</listitem>
+<listitem>
+<para>When multiple lines are selected, the <keycap>Tab</keycap> key indents the whole block by one tab.</para>
+<tip><para>To indent multiple lines, you can just select the last character of the first line to be indented up to the first character of the last line to be indented.</para></tip></listitem>
+</itemizedlist>
+<warning><para>If you want to indent a block of code, be sure it contains at least an end of line character with one of the above tips.</para>
+</warning>
+</sect2>
+
+<sect2 id="usage-force-encodings">
+<title>Forcing the encoding</title>
+<itemizedlist>
+<listitem>
+<para>Default behaviour: as already stated, the default file encoding for any new document is <acronym>UTF-8</acronym>. When opening a file, <application>cssed</application> tries to recognize the <acronym>UTF-8</acronym> encoding and open the file with that encoding if it is valid <acronym>UTF-8</acronym>. On the contrary, it will open the file with the <acronym>ISO-xxxx</acronym> encoding, which best matches.</para>
+</listitem>
+<listitem>
+<para>Forcing: if you want to use another encoding, either with a new file or when opening an already existing file, force the encoding just before writing any text</para>
+<para>If you want to write JIS or Hangul, you must force the encoding to DBCS on each document you create or open.</para>
+</listitem>
+</itemizedlist>
+<note><para>You may want to check the encoding of the file <filename>foo</filename> with:</para>
+<para><computeroutput>file foo</computeroutput>.</para>
+<para>Take into acount that <command>file</command> always reports <acronym>ASCII</acronym> encoding when there is no accented character in the file.</para></note>
+<warning><para>Do not mix encodings in a given file, you will end up with bad rendering.</para></warning>
+</sect2>
+
+<sect2 id="usage-character-set">
+<title>Setting the character set</title>
+<para>This is only needed for Asian languages. The supported character sets are the following:</para>
+<itemizedlist>
+	  <listitem><para><acronym>ANSI</acronym>: American standard, generally used with <acronym>ASCII</acronym> encoding</para></listitem>
+	  <listitem><para><acronym>Western Europe</acronym>: accented characters, generally used with <acronym>ISO-xxxx</acronym> or <acronym>UTF-8</acronym> encodings</para></listitem>
+	  <listitem><para><acronym>GB2312</acronym>: used with <acronym>DBCS</acronym> and <acronym>UTF-8</acronym> encodings</para></listitem>
+	  <listitem><para><acronym>Hangul</acronym>: Native Korean, used with <acronym>DBCS</acronym> and <acronym>UTF-8</acronym> encodings</para></listitem>
+	  <listitem><para><acronym>Shift JIS</acronym>: Japanese, used with <acronym>DBCS</acronym> and <acronym>UTF-8</acronym> encodings</para></listitem>
+</itemizedlist>
+<para><acronym>ANSI</acronym> and <acronym>Western Europe</acronym> are recognized when typing characters.</para>
+<para>To use input methods in <application>cssed</application>, you will need to proceed as follows:</para>
+<procedure id="proc-input-method">
+<title>Using input method in cssed</title>
+	<step><para>Set the font to the Asian font of your choice</para></step>
+	<step><para>Set the encoding to <acronym>DBCS</acronym> or <acronym>UTF-8</acronym></para></step>
+		<step><para>Set the character set to <acronym>GB2312</acronym>, <acronym>
+Hangul</acronym>, or <acronym>Shift JIS</acronym></para></step>
+</procedure>
+</sect2>
+</sect1>
+
+<sect1 id="usage-treeview">
+<title>The tree view</title>
+<para> The <acronym>CSS</acronym> tree view is located in the side panel (See <xref linkend="interface-side-panel">) and allows you to see all properties and values in the current CSS definition file (See <xref linkend="configuration-css-definition-file">). </para>
+<variablelist><title>Using the tree view</title>
+<varlistentry><term>Navigating through the properties</term>
+<listitem><para>Use the scroll bar on the right side to browse the tree.</para></listitem></varlistentry>
+<varlistentry><term>Displaying the values</term>
+<listitem><para><mousebutton>Click</mousebutton> on the arrow in the Version column to unfold the values of a given property. <mousebutton>Click</mousebutton> again to fold them.</para></listitem></varlistentry>
+<varlistentry><term>Adding properties to the document</term>
+<listitem><para><mousebutton>Double-click</mousebutton> on the desired value of any property. This will add the property/values pair, following by an end of line character. This way you can quickly insert various properties without typing the end of line character yourself.</para></listitem></varlistentry>
+</variablelist>
+<note><para>A value embedded in parentheses leads to a dialog. Just <mousebutton>double-click</mousebutton> on it to access the dialog, fill it in, and <mousebutton>click</mousebutton> on <keycap>OK</keycap>.</para>
+</note>
+</sect1>
+
+<sect1 id="usage-selector-scanner">
+<title>The selector scanner</title>
+<para>The selector scanner is not finished yet, but is now a working feature.</para>
+<procedure id="proc-usage-scan">
+<title>To use the selector scanner, you should follow these steps:</title>
+<step><para>First place the caret <footnote>
+<para> The caret is the blinking line that shows you the location of the text insertion point.</para>
+</footnote> between the opening and closing braces of a selector or identity definition.</para></step>
+<step><para>Select the scan selector tool in the menu <menuchoice><shortcut><keycombo><keysym>Alt</keysym><keysym>T</keysym><keysym>s</keysym></keycombo></shortcut><guimenu>Tools</guimenu><guimenuitem>Scan selector</guimenuitem></menuchoice>.</para>
+<para>The current declaration is scanned and shown in the list at the top of the side panel (See <xref linkend="interface-side-panel">).</para></step>
+<step><para>Edit the values by either:</para>
+<substeps><step><para><mousebutton>Clicking</mousebutton> twice the Value column to edit directly the value.</para></step>
+<step><para><mousebutton>Double-clicking</mousebutton> the down triangle facing icon in the third column to choose the value from a pop up menu.</para></step></substeps></step></procedure>
+<para>It is planned that this list will be a drop target for the CSS tree view to quickly insert or replace new property/value pairs.</para>
+</sect1>
+
+<sect1 id="usage-digest">
+<title>The digest</title>
+<para>The digest, located in the side panel too (see <xref linkend="interface-side-panel">) is very handy when working with huge documents.</para>
+<procedure id="proc-use-digest">
+<title>Using the digest</title>
+<step><para>Just <mousebutton>click</mousebutton> on the digest tab to access it.</para></step>
+<step><para><mousebutton>Click</mousebutton> on the parse document title to get the document folded by declaration.</para></step>
+<step><para><mousebutton>Double-click</mousebutton> on the desired line in the digest panel to get access to it in the document.</para>
+<para>You will see the document scrolling up/down to the first line of the declaration, which will be marked with a chevron in the margin.</para>
+<para><figure id="figure-digest-using"><title id="figure-digest-using-title">Accessing a declaration from the digest</title>
+<screenshot><mediaobject>
+<imageobject><imagedata fileref="figures/digest-using" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/digest-using.png" format="PNG"></imageobject>
+<textobject><phrase>Accessing a declaration from the digest.</phrase></textobject>
+</mediaobject></screenshot>
+</figure></para></step>
+</procedure></sect1>
+
+<sect1 id="usage-scratch-static-pads">
+<title>The scratch and static pads</title>
+<para>The scratch and static pads (see <xref linkend="interface-footer"> are one of those silly features that you can love or hate. Those are nothing but text buffers that can be used as a drag &amp; drop target/source to the editor windows, as a second clipboard, or simply for notes.</para>
+<para>It was added to <application>cssed</application> because some years ago I used an application with a similar scratch pad. I started to work with this application without using it at all. As times went on, I began to use it to do a lot of things: as a second editable clipboard, to put notes about what I was doing while editing multiple documents, and even to copy/edit and paste a buffer in various documents.</para>
+<para>The clipboard do not let us easily edit its contents, so I finally get in love with the scratch pad. It is the easy explanation about why <application>cssed</application> has a &ldquo;scratch pad&rdquo;.</para>
+<para>Notice that the pads are divided into two parts. As their names suggest, the scratch pad is temporary, while the static pad is permanent.</para>
+<tip><para>Use the scratch pad while editing files, then store in static pad what you want to have at hand permanently. You can drag and drop between the pads.</para></tip>
+</sect1>
+
+<sect1 id="usage-output-window">
+<title>The program output window</title>
+<para>To avoid excessive use of warning dialog boxes, <application>cssed</application> uses a list at the application's footer to show relevant but not critical output (see <xref linkend="interface-footer">). It is used by the <acronym>CSS</acronym> dialogs to warn about problems or default values in the dialog boxes.</para>
+<para>It is also used by the validator to show its output.</para>
+<para>You can clear this output window with the menu item <menuchoice><guimenu>Tools</guimenu><guimenuitem>Clean program output</guimenuitem></menuchoice>.</para>
+</sect1>
+
+<sect1 id="usage-css-menu">
+<title>The <acronym>CSS</acronym> menu</title>
+<para>From this menu you can access all dialogs - just the dialogs - used in the tree view or auto completion menu, to ease the insertion of complex <acronym>CSS</acronym> values.</para>
+<para>From this menu you can also access the <emphasis>Selector Wizard</emphasis>, the <emphasis>Color Wizard</emphasis>, and the <emphasis>Box Properties Wizard</emphasis>. </para>
+</sect1>
+
+<sect1 id="usage-selector-wizard">
+<title>The selector Wizard</title>
+<para>The selector wizard lets you add one or various empty selectors at one time. This way you can start quickly a new style sheet with the most common selectors. It only applies to style sheets used with <acronym>HTML</acronym> documents.</para>
+<para>There are different kinds of selectors you can add from this dialog. Those selectors' types can be selected with the buttons at the upper left corner of the dialog. You can only add a type of selectors at a time.</para>
+<para>When you select a selector set - a group of selectors in the rightmost list of this dialog - you can choose between create a declaration for each, or use the same declaration for all by checking the radio buttons at the lower right corner of the dialog.</para>
+<para>The types of selectors that can be found are:</para>
+<itemizedlist>
+<listitem>
+<para>Single selector - selector button: it adds a single selector. The style will be applied to any tag matching the selector tag.</para>
+</listitem>
+<listitem>
+<para> Child selectors: here you can set the style of any selector with a matching parent. The parent selector will be chosen from the first list, the child selector from the second. For example: <emphasis>p &gt; b</emphasis> - select <emphasis>p</emphasis> in the first list and <emphasis>b</emphasis> in the second - will apply the style to any <emphasis>b</emphasis> tag with a <emphasis>p</emphasis> tag parent. </para>
+</listitem>
+<listitem>
+<para> Class selectors: it sets the style of any selector identified by the <emphasis>class</emphasis> attribute. For example, <emphasis>p.test</emphasis> will match any <emphasis>p</emphasis> tag with <emphasis>class="test"</emphasis> attribute.
+<programlisting><![CDATA[<p class="test">this  will be shown with the p.test style</p>]]></programlisting>
+</para>
+</listitem>
+<listitem>
+<para> Sibling selectors: with sibling selectors you can apply style to one tag preceded by other tag in the same parent. If you want to apply style - for example - to any <emphasis>p</emphasis> tag preceded by a <emphasis>h1</emphasis> tag, you must choose in the Sibling pane, h1 in the first list and p in the second list. This will produce the selector <emphasis>h1 + p</emphasis>.
+<programlisting><![CDATA[<div><h1>header</h1><p>this  will be shown with the h1 + p style</p>]]></programlisting>
+</para>
+</listitem>
+<listitem>
+<para> Contextual selectors: contextual selectors, let you apply a style to any tag with a specific ancestor. For example, selecting <emphasis>p</emphasis> in the first list and <emphasis>b</emphasis> in the second, will apply style to all <emphasis>b</emphasis> tags within a <emphasis>p</emphasis> tag. </para>
+</listitem>
+</itemizedlist>
+</sect1>
+
+<sect1 id="usage-syntax-validator">
+<title>The syntax validator</title>
+<para>You can validate the syntax of your CSS document from the menu <menuchoice><guimenu>Tools</guimenu><guimenuitem>Validate and dump</guimenuitem></menuchoice> or <menuchoice><guimenu>Tools</guimenu><guimenuitem>Validate only</guimenuitem></menuchoice>.</para>
+<para>The validator uses a subset of the libcroco library modified to get its output in <application>cssed</application>.</para>
+<para>Libcroco is a parsing and layout engine used to parse and show CSS styled output. Since it works exactly as a user agent - parsing until fatal error and avoiding some invalid values - we can know how our style sheet will be read from a CSS2 compliant UA.</para>
+<para>In the menu <menuchoice><guimenu>Tools</guimenu><guimenuitem>Validate and dump</guimenuitem></menuchoice> you can check this behavior. It will show in the output window what it is reading and when it stops parsing.</para>
+<para>The menu <menuchoice><guimenu>Tools</guimenu><guimenuitem>Validate only</guimenuitem></menuchoice> will only show the validation results.</para>
+<para>This validator is unfinished, and some strange behavior may occur.</para>
+<para>Especially if you use empty declarations, the validator will fail even if it must be ignored as it is valid <acronym>CSS</acronym>.</para>
+</sect1>
+</chapter>

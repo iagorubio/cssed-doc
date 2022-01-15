@@ -1,0 +1,32 @@
+#! /bin/bash
+#
+# Convert all gif files to eps or pdf
+# with imagmagick and epstopdf
+
+#Retrieve the format
+FORMAT=e$1
+
+# Clean the directory if needed
+cd images
+echo "Deleting old converted files in case they exist"
+rm *.eps
+rm *.pdf
+
+# Convert
+if [ "$FORMAT" = "eps" ]; then
+	echo "Converting gif images to eps..."
+	for file in *.gif
+	do
+		convert $file `basename -s gif $file`eps
+	done
+else
+	if [ "$FORMAT" = "epdf" ]; then
+		echo "Converting gif images to pdf..."
+		for file in *.gif
+		do
+			convert $file `basename -s gif $file`pdf
+		done
+	else
+		echo "Error, you should provide ps or pdf as extension"
+	fi
+fi

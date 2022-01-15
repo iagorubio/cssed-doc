@@ -1,0 +1,37 @@
+#! /bin/bash
+#
+# Convert all png files to eps with imagemagick
+
+#Retrieve the format
+FORMAT=e$1
+
+#Make some cleaning
+cd figures
+echo "Deleting old converted files in case they exist"
+rm *.eps
+rm *.pdf
+
+# Convert
+if [ "$FORMAT" = "eps" ]; then
+	echo "Converting png files to eps..."
+	for file in *.png
+	do
+		convert $file eps2:`basename -s png $file`$FORMAT
+	done
+else
+	if [ "$FORMAT" = "epdf" ]; then
+		echo "Converting png files to pdf..."
+		for file in *.png
+		do
+			#convert $file `basename -s png $file`$FORMAT
+			convert $file `basename -s png $file`pdf
+		done
+#		for file in *.epdf
+#		do
+#			mv $file `basename -s epdf $file`pdf
+#		done
+	else
+		echo "Error, you should provide ps or pdf as extension"
+	fi
+fi
+

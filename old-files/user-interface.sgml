@@ -1,0 +1,121 @@
+<!--
+ <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook V4.1//EN">
+-->
+  <chapter>
+    <title>
+      User interface
+  </title>
+  <para>
+    This section describes the &app;'s user interface
+    
+  </para>
+  <sect1>
+    <title>
+      Description
+    </title>
+    <para>
+      <figure float="0">
+	<title>cssed user interface
+	</title>
+	<screenshot>
+	  <mediaobject>
+	    <imageobject>
+	      <imagedata fileref="figures/cssed-ui-small.png">
+	    </imageobject>
+	    <textobject>
+	      <phrase>
+		The cssed UI
+	      </phrase>
+	    </textobject>
+	  </mediaobject>
+	</screenshot>
+      </figure>
+    </para>
+    <para>
+      The cssed user interface is divided in four main sections:
+    </para>
+    <itemizedlist>
+      <listitem>
+	<para>
+	  The menu and tool bar: These are for quick access to cssed's main functions.
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  The editor notebook: This is located on the left and below the tool-bar, and contains tabs to all the editor windows.
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  The side panel: It contains the selector scanner and the CSS property's tree view, and is located at the right of cssed interface.
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  The program output and scratch pad: They are at the bottom of the cssed interface.
+	</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  <sect1>
+    <title>
+      The menu and tool bar
+    </title>
+    <para>
+      The menu and tool bar are similar to other editors. From them we can perform the most common task as open/close or save a file, etc...
+    </para>
+    <para>
+      In cssed we are trying not to duplicate menu and tool bar entries, because duplicated entries are usually nothing but confusing. Most applications will put in the tool bar everything found in the menus, but in cssed things don't work this way.
+    </para>
+    <para>
+      There are some commonly used functions that are in both places, in the menu and in the tool bar:
+    </para>
+    <itemizedlist>
+      <listitem>
+	<para>
+	  File open / save and close
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  Quit the application
+	</para>
+      </listitem>
+      <listitem>
+	<para>
+	  Cut / copy or paste text in the editor window
+	</para>
+      </listitem>
+    </itemizedlist>
+    <para>
+      The other features are not duplicated so don't look for the menu's &ldquo;search&rdquo; and &ldquo;replace&rdquo; entry, because it doesn't exist. Use the tool bar button &ldquo;search&rdquo; and &ldquo;replace&rdquo; to perform this task.
+    </para>
+    <para>
+      All buttons in the tool bar but one, perform operations on text and documents. The one that doesn't do that is the &ldquo;color&rdquo; button, that's here because to change a color is the most common task when building new style sheets.
+    </para>
+  </sect1>
+  <sect1>
+    <title>
+      The editor notebook
+    </title>
+      <para>
+      The editor notebook stores all documents opened in cssed. It will always have one document open, so if you close all documents in cssed a blank one will be shown.
+    </para>
+  </sect1>
+  <sect1 id="sub-the-side-panel">
+    <title>
+      The side panel
+    </title>
+    <para>
+      CSS specific items are found in the side-panel. There is the &ldquo;selector scanner&ldquo; that helps in validating syntax in a single selector, and lets you edit values from the list. And the &ldquo;CSS tree view&ldquo; where all the existing CSS2 properties and values are show. Just by double clicking on the selected values, this will insert into the document both the property and value.
+    </para>
+  </sect1>
+  <sect1>
+    <title>
+      The output and scratch pad notebook
+    </title>
+    <para>
+      The output window and the scratch pad are located at the bottom of the notebook. The output window is used for showing to the user information about what's happening in cssed. The scratch pad is just a text buffer to be used as a clipboard or for notes. Some people don't like it. I'm sorry, but I love it and it will remain there in the main cssed distribution. Feel free to contact me for instructions on how to remove this panel if you feel it will jump out and kill you or if you're starting to hate it.
+    </para>
+  </sect1>
+  </chapter>

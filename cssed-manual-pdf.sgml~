@@ -1,0 +1,92 @@
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.1//EN" [
+<!ENTITY cum "<citetitle>CSSED User Manual</citetitle>">
+<!ENTITY manualversion "1.14">
+<!ENTITY softwareversion "0.3.1 - 0.3.0">
+<!ENTITY builddate SYSTEM "builddate">
+<!ENTITY intro SYSTEM "cssed-manual-intro.sgml"><!ENTITY news SYSTEM "cssed-manual-news.sgml">
+<!ENTITY install SYSTEM "cssed-manual-install.sgml">
+<!ENTITY interface SYSTEM "cssed-manual-interface.sgml">
+<!ENTITY usage SYSTEM "cssed-manual-usage.sgml">
+<!ENTITY plugins SYSTEM "cssed-manual-plugins.sgml">
+<!ENTITY accel SYSTEM "cssed-manual-accelkeys.sgml">
+<!ENTITY config SYSTEM "cssed-manual-configuration.sgml">
+<!ENTITY devel SYSTEM "cssed-manual-devel.sgml">
+]>
+<book lang="en">
+
+<!-- Let it here otherwise the accented characters are not handled
+correctly in ps and pdf outputs -->
+<bookinfo>
+<title><application>CSSED</application> User Manual</title>
+<subtitle>for versions &softwareversion;</subtitle>
+<authorgroup>
+<author>
+<firstname>Iago</firstname>
+<surname>Rubio Sanfiz</surname>
+</author>
+<author>
+<firstname lang="fr">Mich&#232;le</firstname>
+<surname lang="fr">Garoche</surname>
+</author>
+</authorgroup>
+<revhistory>
+<revision>
+<revnumber>&manualversion;</revnumber>
+<date>10/02/2005</date>
+<authorinitials>MG</authorinitials>
+<revremark>Updated to cssed versions &softwareversion;, improved stylesheets.</revremark>
+</revision>
+<revision>
+<revnumber>1.13</revnumber>
+<date>29/12/2004</date>
+<authorinitials>IRS</authorinitials>
+<revremark>Added instructions for installation.</revremark>
+</revision>
+<revision>
+<revnumber>1.12</revnumber>
+<date>24/08/2004</date>
+<authorinitials>MG</authorinitials>
+<revremark>Updated to cssed version 0.2-1 - Added jadetex.cfg, scripts for images, customized dsssl and css stylesheets.</revremark>
+</revision>
+<revision>
+<revnumber>1.11</revnumber>
+<date>10/04/2004</date>
+<authorinitials>IRS</authorinitials>
+<revremark>Updated to cssed version 0.1-5.</revremark>
+</revision>
+<revision>
+<revnumber>1.8</revnumber>
+<date>31/12/2003</date>
+<authorinitials>IRS</authorinitials>
+<revremark>Initial release for cssed version pre0.1-2.</revremark>
+</revision>
+</revhistory>
+<legalnotice id="legalnotice">
+<para>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL in the file <ulink url="COPYING-DOCS">COPYING-DOCS</ulink> distributed with this manual.</para> 
+</legalnotice>
+<copyright>
+<year>2003-2005</year>
+<holder>Iago Rubio Sanfiz, Mich&#232;le Garoche</holder>
+</copyright>
+<pagenums>73 pages</pagenums>
+<!-- Date of revision -->
+<pubdate>February, 13th 2005</pubdate>
+<!-- A hack to get whichever text on the title page -->
+<abstract>
+<para>Web site: <ulink url="http://cssed.sourceforge.net">http://cssed.sourceforge.net</ulink></para>
+<para>Project page: <ulink url="http://sourceforge.net/projects/cssed">http://sourceforge.net/projects/cssed</ulink></para>
+<para>This manual has been written with GNU emacs and bluefish in SGML DocBook format with customized stylesheets derived from NWalsh and dsssl stylesheets. The PostScript, PDF and HTML outputs are produced with customized scripts via OpenJade. All images have been created with screen shots and modified with the Gimp and ImageMagick.</para>
+<para>Built on &builddate;.</para>
+</abstract>
+</bookinfo>
+&intro;
+&news;
+&install;
+&interface;
+&usage;
+&plugins;
+&accel;
+&config;
+&devel;
+</book>
+	

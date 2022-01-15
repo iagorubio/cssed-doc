@@ -1,0 +1,593 @@
+<chapter id="accelerator-keys">
+<title>Accelerator keys</title>
+<para>Under this generic name, we will present you the various ways to perform quickly a given action in the current version of <application>cssed</application>.</para>
+<para>There are editor window accelerator keys (EWA keys) and menu accelerator keys (MA keys), as well as icons accessibles from the tool bars and some generic combination of keys. The later are listed at the bottom of the table.</para>
+<note><para>Note that the menu accelerator keys described below match only the English version.</para></note>
+<warning><para>Mac OS X users could not use the menu accelerator keys.</para></warning>
+<para>
+<table id="acceleratorkeys" frame="all" tocentry="1">
+<title>Shortcuts</title>
+<tgroup cols="4" colsep="1" rowsep="1">
+<colspec colwidth="5*" colname="col0" align="left">
+<colspec colwidth="2*" colname="col1" align="center">
+<colspec colwidth="2*" colname="col2" align="center">
+<colspec colwidth="1*" colname="col3" align="center">
+<thead>
+<row valign="middle">
+<entry align="center">Action</entry>
+<entry>EWA keys</entry>
+<entry>MA keys</entry>
+<entry>Icons</entry>
+</row>
+</thead>
+<tbody>
+<row valign="middle">
+<entry>Open the File menu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>F</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Create a new file</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>F</keycap><keycap>N</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon01" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon01.png" format="PNG"></imageobject>
+<textobject><phrase>Icon new file</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Open a  file</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>F</keycap><keycap>O</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon02" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon02.png" format="PNG"></imageobject>
+<textobject><phrase>Icon open file</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Close the current file</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>F</keycap><keycap>C</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon05" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon05.png" format="PNG"></imageobject>
+<textobject><phrase>Icon close file</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Close all files</entry>
+<entry> </entry>
+<entry> </entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Revert to the last saved state</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>F</keycap><keycap>R</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon33" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon33.png" format="PNG"></imageobject>
+<textobject><phrase>Icon revert</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Save the current file</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap> S</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>F</keycap><keycap>S</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon03" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon03.png" format="PNG"></imageobject>
+<textobject><phrase>Icon save file</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Save the current file as</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>F</keycap><keycap>A</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon04" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon04.png" format="PNG"></imageobject>
+<textobject><phrase>Icon save file as</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Save all files</entry>
+<entry> </entry>
+<entry> </entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Quit cssed</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>F</keycap><keycap>Q</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open the Edit menu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>E</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Undo the last action</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>E</keycap><keycap>U</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon11" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon11.png" format="PNG"></imageobject>
+<textobject><phrase>Icon undo</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Redo the last undone action</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>E</keycap><keycap>R</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon12" format="EPS"></imageobject>
+<textobject><phrase>Icon redo</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Cut the selection</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>X</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>E</keycap><keycap>t</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon06" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon06.png" format="PNG"></imageobject>
+<textobject><phrase>Icon cut</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Copy the selection</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>C</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>E</keycap><keycap>C</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon07" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon07.png" format="PNG"></imageobject>
+<textobject><phrase>Icon copy</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Paste the selection</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>V</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>E</keycap><keycap>P</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon08" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon08.png" format="PNG"></imageobject>
+<textobject><phrase>Icon paste</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Delete the selection</entry>
+<entry><keycap>Backspace</keycap>/<keycap>suppr</keycap></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>E</keycap><keycap>D</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Find</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>F</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>E</keycap><keycap>F</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon09" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon09.png" format="PNG"></imageobject>
+<textobject><phrase>Icon find</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Find and replace</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>R</keycap></keycombo></entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>E</keycap><keycap>R</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon10" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon10.png" format="PNG"></imageobject>
+<textobject><phrase>Icon find and replace</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Preferences</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>E</keycap><keycap>P</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon19" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon19.png" format="PNG"></imageobject>
+<textobject><phrase>Icon preferences</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Open View menu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>V</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open Toolbar submenu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>V</keycap><keycap>T</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open Document list submenu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>V</keycap><keycap>l</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Create a document list from opened documents</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>V</keycap><keycap>l</keycap><keycap>O</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open a document list</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>V</keycap><keycap>l</keycap><keycap>f</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Create an empty document list</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>V</keycap><keycap>l</keycap><keycap>B</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Zoom in the current document</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>V</keycap><keycap>I</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Zoom out the current document</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>V</keycap><keycap>O</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Normal size on the current document</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>V</keycap><keycap>N</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open the Document menu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Show/hide line numbers</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>n</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Show/hide line endings</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>e</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Show/hide white spaces</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>s</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Wrap/unwrap lines</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>w</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Enable/disable auto completion</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap> a</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Enable/disable folding</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>f</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open the set EOL mode submenu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>m</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Set Mac EOL mode</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>m</keycap><keycap>R</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Set Unix EOL mode</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>m</keycap><keycap>F</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Set DOS EOL mode</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>m</keycap><keycap>C</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open the Convert EOLs submenu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>m</keycap><keycap>O</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Convert to Mac EOL mode</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>m</keycap><keycap>O</keycap><keycap>R</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Convert to Unix EOL mode</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>m</keycap><keycap>O</keycap><keycap>F</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Convert to DOS EOL mode</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>m</keycap><keycap>O</keycap><keycap>C</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open the Folding submenu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>d</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Fold all properties</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>d</keycap><keycap>F</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Unfold all properties</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>d</keycap><keycap>U</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open the Highlighting submenu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight plain text</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>P</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight CSS</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>C</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight HTML/PHP</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>H</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight shell scripts</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>S</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight C/C++</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>P</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight Apache configuration files</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>A</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight PERL scripts</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>L</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight Python scripts</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>y</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight XML</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>X</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight diff/patch</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>D</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Highlight Makefile</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>H</keycap><keycap>M</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Change the font of the current document</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>D</keycap><keycap>C</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open the CSS menu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>C</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Open the Tools men</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>T</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Scan the current selector</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>T</keycap><keycap>S</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon28" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon28.png" format="PNG"></imageobject>
+<textobject><phrase>Icon scan selector</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Give information about the document</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>T</keycap><keycap>D</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon29" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon29.png" format="PNG"></imageobject>
+<textobject><phrase>Icon doc info</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Show auto completion</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>T</keycap><keycap> a </keycap></keycombo> / <keycombo><keycap>Alt</keycap><keycap>A</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Clean the program output</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>T</keycap><keycap>C</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon30" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon30.png" format="PNG"></imageobject>
+<textobject><phrase>Icon clean program output</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Validate and dump the current document</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>T</keycap><keycap>V</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon32" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon32.png" format="PNG"></imageobject>
+<textobject><phrase>Icon new file</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Validate the current document</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>T</keycap><keycap>o</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon31" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon31.png" format="PNG"></imageobject>
+<textobject><phrase>Icon new file</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Open the Panels menu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>P</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Show the footer panel</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>P</keycap><keycap>f</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon18" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon18.png" format="PNG"></imageobject>
+<textobject><phrase>Icon show footer panel</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Hide the footer panel</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>P</keycap><keycap>p</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon17" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon17.png" format="PNG"></imageobject>
+<textobject><phrase>Icon hide footer panel</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Show the side panel</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>P</keycap><keycap>S</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon16" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon16.png" format="PNG"></imageobject>
+<textobject><phrase>Icon show side panel</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Hide the side panel</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>P</keycap><keycap>H</keycap></keycombo></entry>
+<entry><inlinemediaobject>
+<imageobject><imagedata fileref="figures/icon15" format="EPS"></imageobject>
+<imageobject><imagedata fileref="figures/icon15.png" format="PNG"></imageobject>
+<textobject><phrase>Icon hide side panel</phrase></textobject>
+</inlinemediaobject></entry>
+</row>
+<row valign="middle">
+<entry>Show the Help menu</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>H</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Show the About box</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>H</keycap><keycap>A</keycap></keycombo></entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Delete the current line</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>L</keycap></keycombo></entry>
+<entry> </entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Duplicate the current line</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>D</keycap></keycombo></entry>
+<entry> </entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Select all text</entry>
+<entry><keycombo><keycap>Ctrl</keycap><keycap>A</keycap></keycombo></entry>
+<entry> </entry>
+<entry> </entry>
+</row>
+<row valign="middle">
+<entry>Select the current line</entry>
+<entry> </entry>
+<entry><keycombo><keycap>Alt</keycap><keycap>I</keycap></keycombo></entry>
+<entry> </entry>
+</row>		
+</tbody>
+</tgroup>
+</table>
+</para>
+</chapter>

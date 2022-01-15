@@ -1,0 +1,112 @@
+<chapter id="devel">
+<title>Development</title>
+
+<sect1 id="devel-state">
+<title>State</title>
+<para><application>cssed</application> is in Alpha state now.</para>
+<para>Some features have already been implemented, others are planned.</para>
+<para>Additional features may be added via the plugable interface.</para>
+
+<sect2 id="devel-implemented-features">
+<title>Implemented features</title>
+<itemizedlist>
+<listitem>
+<para><acronym>CSS</acronym> syntax validation.</para>
+</listitem>
+<listitem>
+<para><acronym>CSS</acronym>, plain text, HTML/PHP, sh, C/CPP, Apache/.htaccess, Perl, Python, xml, Diff/patch, Makefile syntax highlighting.</para>
+</listitem>
+<listitem>
+<para>Forcing encoding: UTF8, DBCS, ISO-xxx.</para>
+</listitem>
+<listitem>
+<para>Switching character sets.</para>
+</listitem>
+<listitem>
+<para>Search and replace.</para>
+</listitem>
+<listitem>
+<para>XML based <acronym>CSS</acronym> definition file (easy to customize).</para>
+</listitem>
+<listitem>
+<para>Auto completion.</para>
+</listitem>
+<listitem>
+<para>Dialog driven <acronym>CSS</acronym> property insertion.</para>
+</listitem>
+<listitem>
+<para>More than 30 dialogs for complex ( non static ) <acronym>CSS</acronym> properties and values.</para>
+</listitem>
+<listitem>
+<para>Full CSS2 support.</para>
+</listitem>
+<listitem>
+<para>Show or hide line numbers, white spaces or line endings.</para>
+</listitem>
+<listitem>
+<para>Line ending conversion between Windows, Mac and Unix end of line characters.</para>
+</listitem>
+<listitem>
+<para>Markers used as bookmarks for easy navigation through a document.</para>
+</listitem>
+<listitem>
+<para>MDI interface (notebook based).</para>
+</listitem>
+<listitem>
+<para><acronym>CSS</acronym> validation.</para>
+</listitem>
+<listitem>
+<para><acronym>CSS</acronym> selector, id, class and complete style wizards.</para>
+</listitem>
+<listitem>
+<para>Color wizard.</para>
+</listitem>
+<listitem>
+<para>Box wizard.</para>
+</listitem>
+<listitem>
+<para>XML based configuration file.</para>
+</listitem>
+<listitem>
+<para>Digest.</para>
+</listitem>
+<listitem>
+<para>Info on document.</para>
+</listitem>
+<listitem>
+<para>Zooming.</para>
+</listitem>
+<listitem>
+<para>Folding/unfolding.</para>
+</listitem>
+<listitem>
+<para>See also <xref linkend="Plugins"> for additional features.</para>
+</listitem>
+</itemizedlist>
+</sect2>
+
+<sect2 id="devel-planned-features">
+<title>Planned features</title>
+<itemizedlist>
+<listitem>
+<para>Preview in browser.</para>
+</listitem>
+<listitem>
+<para>Preview window to check styles.</para>
+</listitem>
+<listitem>
+<para>Create style sheets from <acronym>HTML</acronym>.</para>
+</listitem>
+</itemizedlist>
+</sect2>
+</sect1>
+
+<sect1 id="devel-help">
+<title>Getting involved</title>
+<para>If you want to help, request it on the source forge's project page, or via the mailing list cssed-devel@lists.sourceforge.net</para>
+<para>The list web interface is at http://lists.sourceforge.net/lists/listinfo/cssed-devel</para>
+<para> You can also send a mail with the word <emphasis>help</emphasis> in message's body to <emphasis>cssed-dev-request@lists.sourceforge.net</emphasis>. If your mail user agent or web interface add a signature to your mail, use the words <emphasis>help</emphasis> and in the following line type
+<emphasis>end</emphasis>. </para>
+<para>You can get more help about the use of the mailing list interface in the mailman page at http://www.list.org/mailman-member/index.html</para>
+</sect1>
+</chapter>

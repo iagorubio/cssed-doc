@@ -1,0 +1,433 @@
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.1//EN"[
+<!ENTITY author "Iago Rubio">
+<!ENTITY docversion "1.8">
+<!ENTITY app "cssed">
+<!ENTITY appversion "0.2.1">
+<!ENTITY introduction SYSTEM "introduction.sgml">
+<!ENTITY installation SYSTEM "installation.sgml">
+<!ENTITY features SYSTEM "features.sgml">
+<!ENTITY userinterface SYSTEM "user-interface.sgml">
+<!ENTITY usingcssed SYSTEM "using-cssed.sgml">
+] >
+<book lang="en">
+  <title>
+	CSSED: User Manual
+  </title>
+  <bookinfo>
+    <authorgroup>
+      <author>
+	<firstname>Iago</firstname>
+	<surname>Rubio Sanfiz</surname>      
+      </author>
+    </authorgroup>
+    <legalnotice>
+      <para>
+	Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL in the file <ulink url="COPYING-DOCS">COPYING-DOCS</ulink> distributed with this manual. 
+      </para>
+    </legalnotice>
+    <copyright>
+      <year>2003-2004</year>
+    </copyright>
+    <date>
+      11/24/2003
+    </date>
+  </bookinfo>
+
+  <!-- the introduction about cssed and css -->
+  &introduction;
+  <!-- download and installation -->
+  &installation;
+  <!-- cssed's features -->
+  &features;
+  <!-- user interface  desciption -->
+  &userinterface;
+  <!-- cssed's ussage -->
+  &usingcssed;
+
+
+
+  <chapter>
+	<title>
+	  CSS definition file
+	</title>
+    <sect1 id="sec-CSS-definition-file">
+      <title>
+	  CSS definition file
+      </title>
+      <para>
+	The CSS definition file is the core of cssed. It contains all of the valid CSS properties and values.
+      </para>
+      <para>
+	All properties and values cssed uses will be taken from this file. It is also used by the tree view (<xref linkend="sub-the-treeview">), and by auto-completion (<xref linkend="sub-auto-completion">).
+      </para>
+      <para>
+	Its format is really easy, it is in XML. And it only has three tags :
+      </para>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    <emphasis>&lt;cssed-def&gt;&lt;/cssed-def&gt;</emphasis> This is the root node and can contain one or more <emphasis>&lt;element&gt;</emphasis> tags.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    <emphasis>&lt;element&gt; &lt;/element&gt; </emphasis> This tag defines a CSS property as &ldquo;border&rdquo; or &ldquo;margin&rdquo; and it can contain one or more <emphasis>&lt;value&gt;</emphasis> tags.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    <emphasis>&lt;value /&gt; </emphasis> This defines one of the possible values for the element and it's an empty tag (Can not contain other tags).
+	  </para>
+	</listitem>
+      </itemizedlist>
+      <para>
+	The <emphasis>cssed-def</emphasis> element have a property <emphasis>implementation</emphasis> that will be show as the root node in the tree view (<xref linkend="sub-the-treeview">). Valid examples are:
+      </para>
+      <programlisting>
+	<![CDATA[<cssed-def implementation="CSS-2"></cssed-def>
+	]]><![CDATA[<cssed-def implementation="My CSS"></cssed-def>
+	]]>
+      </programlisting>
+      <para>
+	The element node has an attribute <emphasis>name</emphasis> that must contain the property's name. Valid examples are:
+      </para>
+      <programlisting>
+	<![CDATA[<element name="azimuth"></element>
+	]]><![CDATA[<element name="azimuth"></element>
+	]]>
+      </programlisting>
+      <para>
+	The <emphasis>value</emphasis> nodes have two attributes. The first attribute named <emphasis>type</emphasis> is currently unused, but it's mandatory to set it to the values <emphasis>string</emphasis> or <emphasis>fixed-string</emphasis> for compatibility with further versions of cssed. The second attribute, <emphasis>name</emphasis>, must contain the value itself. If type is equal to <emphasis>string</emphasis> it means that it is a complex - not fixed - value and must be dialog driven. The dialog name must be marked between braces. If type is equal to <emphasis>fixed-string</emphasis>, it means that the string in the name attribute is a possible value for the property and will be inserted directly. Valid examples are:
+      </para>
+      <programlisting>
+	<![CDATA[<value type="string" name="(angle)" /> 
+	]]><![CDATA[<value type="fixed-string" name="none" /> 
+	]]><![CDATA[<value type="fixed-string" name="red" /> 
+	]]>
+      </programlisting>
+      <para>
+	In the first example a dialog named &ldquo;<emphasis>(angle)</emphasis>&rdquo; will be used to drive property's value insertion. In the second and third, the values <emphasis>none</emphasis> and <emphasis>red</emphasis> will be directly inserted as valid property's value.
+      </para>
+      <para>
+	Here is a complete example of cssed configuration file:
+      </para>
+      <programlisting>
+	<![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+	]]><![CDATA[<cssed-def implementation="CSS-2"> 
+	]]><![CDATA[<element name="azimuth">
+	]]><![CDATA[<value type="string" name="(angle)" /> 
+	]]><![CDATA[<value type="fixed-string" name="none" /> 
+	]]><![CDATA[</element>
+	]]><![CDATA[</cssed-def>
+	]]>
+      </programlisting>
+      <sect2>
+	<title>
+	  DTD
+	</title>
+	<para>
+	  The Document Type Definition of the cssed-def.xml file is the following:
+	</para>
+	<programlisting>
+	  <![CDATA[<!ELEMENT cssed-def ( element+ ) >
+	  ]]><![CDATA[<!ATTLIST cssed-def implementation NMTOKEN #REQUIRED >
+	  ]]><![CDATA[
+	  ]]><![CDATA[<!ELEMENT element ( value+ ) >
+	  ]]><![CDATA[<!ATTLIST element name ID #REQUIRED >
+	  ]]><![CDATA[
+	  ]]><![CDATA[<!ELEMENT value EMPTY >
+	  ]]><![CDATA[<!ATTLIST value name CDATA #REQUIRED >
+	  ]]><![CDATA[<!ATTLIST value type ( fixed-string | string ) #REQUIRED >
+	  ]]>
+	</programlisting>
+      </sect2>
+      <sect2>
+	<title>
+	  Built in dialogs
+	</title>
+	<para>
+	  There are some dialogs that can be used right now in the css definition file. There is a list of them below. The dialog name is between parenthesis - as it must be in the definition file itself - the <emphasis>&ldquo;Url&rdquo;</emphasis> points to the page of the CSS2 specification that defines the dialog's value, and the <emphasis>&ldquo;Used by&rdquo;</emphasis> field lists the properties that use this dialog.
+	</para>
+	<itemizedlist>
+	  <listitem>
+	    <para>
+	      (angle) : Insert an angle. 
+	      Url: <ulink url=" http://www.w3.org/TR/CSS2/syndata.html#value-def-angle">http://www.w3.org/TR/CSS2/ syndata.html&num;value-def-angle</ulink>
+	      Used by: <emphasis>azimuth</emphasis>.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (attr): Used to insert the content of one tag's attribute . 
+	      Url: <ulink url=" http://www.w3.org/TR/CSS2/generate.html&num;propdef-content">http://www.w3.org/TR/CSS2/generate.html&num;propdef-content</ulink> 
+	      
+	      Used by: <emphasis>content</emphasis>.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (background): Let you select various values to a <emphasis>background</emphasis> property. 
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/colors.html#propdef-background">http://www.w3.org/TR/CSS2/colors.html &num;propdef-background</ulink>
+	      Used by: <emphasis>background</emphasis>.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (border): Add value to a <emphasis>border</emphasis> property. Set's the value for all borders.
+	      Url: <ulink url="http:// www.w3.org/TR/CSS2/box.html#propdef-border">http:// www.w3.org/TR/CSS2/box.html&num;propdef-border</ulink>
+	      Used by: <emphasis>border</emphasis>.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (border-width): Add the width to one border. 
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/box.html#propdef-border">http://www.w3.org/TR/CSS2/box.html&num;propdef-border</ulink>
+	      Used by:<emphasis> border-top-width,</emphasis> <emphasis>border-right-width,</emphasis> <emphasis>border-bottom-width</emphasis> and <emphasis>border-left-width</emphasis>. 
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (border-width-style-color): Set the width style and color of one border. 
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/box.html#propdef-border">http://www.w3.org/TR/CSS2/box.html&num;propdef-border</ulink>
+	      Used by: <emphasis>border-top,</emphasis> <emphasis>border-right,</emphasis> <emphasis>border-bottom,</emphasis> <emphasis>border-left</emphasis>.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (increment-reset) : set the increment or reset of a <emphasis>counter</emphasis> property. 
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/generate.html#counters">http://www.w3.org/TR/CSS2/generate.html&num;counters</ulink>
+	      Used by: <emphasis>counter-increment,</emphasis> <emphasis>counter-reset</emphasis>.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (counter): set a counter to a <emphasis>content</emphasis> property. 
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/generate.html#counters">http://www.w3.org/TR/CSS2/generate.html&num;counters</ulink>
+	      Used by: <emphasis>content</emphasis>.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (string): add a string as value for a property.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/syndata.html&num;value-def-string">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-string</ulink>
+	      Used by:<emphasis> content,</emphasis> <emphasis>quotes, text-align,.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (uri): set a url as value for a property with the <emphasis>url() </emphasis>function.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/syndata.html&num;value-def-uri">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-uri</ulink>
+	      Used by: <emphasis>background-image, image, content, cue, cue-after, cue-before, cursor, list-style-image.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (font): it fills the values of one border property.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/box.html&num;border-properties">http://www.w3.org/TR/CSS2/box.html&num;border-properties</ulink>
+	      Used by: <emphasis>border.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (font-family): used to set the font's family.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/fonts.html&num;propdef-font-family">http://www.w3.org/TR/CSS2/fonts.html&num;propdef-font-family</ulink>
+	      Used by: <emphasis>font-family.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (font-size): used to set the size of a font.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/fonts.html&num;propdef-font-size">http://www.w3.org/TR/CSS2/fonts.html&num;propdef-font-size</ulink>
+	      Used by: <emphasis>font-size.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (identifier): used to set an identifier as value for a property.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/syndata.html&num;value-def-identifier">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-identifier</ulink>
+	      Used by: <emphasis>page.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (integer): it adds an integer number value to a property.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/syndata.html&num;value-def-integer">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-integer</ulink>
+	      Used by: <emphasis>windows, z-index, font-size-adjust, orphans.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (length): it set a length as value for a property.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/syndata.html&num;value-def-length">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-length</ulink>
+	      Used by: <emphasis>marker-offset, word-spacing.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (list-style): it set the style of the markers in a list. It can be numerical, graphical, or alphabetical.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/generate.html&num;propdef-list-style">http://www.w3.org/TR/CSS2/generate.html&num;propdef-list-style</ulink>
+	      Used by: <emphasis>list-style.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (margin): it's used to set all margin values (top, left, bottom and right).
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/box.html&num;propdef-margin">http://www.w3.org/TR/CSS2/box.html&num;propdef-margin</ulink>
+	      Used by: <emphasis>margin.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (margin-width): it's used to set the width of one margin.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/box.html&num;value-def-margin-width">http://www.w3.org/TR/CSS2/box.html&num;value-def-margin-width</ulink>
+	      Used by: <emphasis>margin-top, margin-right, margin-bottom, margin-left.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (number) : it's used to set a real number as value for a property. It's used by aural properties.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/syndata.html&num;value-def-number">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-number</ulink>
+	      Used by: <emphasis>pitch-range, richness, speech-rate, stress, volume.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (padding): it's used to set all paddings in a box element.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/box.html&num;propdef-padding">http://www.w3.org/TR/CSS2/box.html&num;propdef-padding</ulink>
+	      Used by: <emphasis>padding.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (pause): set a pause in an aural property.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/aural.html&num;propdef-pause">http://www.w3.org/TR/CSS2/aural.html&num;propdef-pause</ulink>
+	      Used by: <emphasis>pause.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (percentage): it set a percentage as value for a property.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/syndata.html&num;value-def-percentage">http://www.w3.org/TR/CSS2/syndata.html&num;value-def-percentage</ulink>
+	      Used by: <emphasis>pause, volume.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (percentage-length): it's used by properties that can take as value one percentage or a numerical length.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/syndata.html&num;values">http://www.w3.org/TR/CSS2/syndata.html&num;values</ulink>
+	      Used by: <emphasis>right, text-indent, top, width, vertical-align, background-position, border, bottom, height, max-height, max-width, min-height, min-width, padding-top, padding-right, padding-bottom, padding-left.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (play-during): it set a sound to be played and the repeat or mixing properties of this sound, in aural style sheets.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/aural.html&num;propdef-play-during">http://www.w3.org/TR/CSS2/aural.html&num;propdef-play-during</ulink>
+	      Used by: <emphasis>play-during.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (quotes): used to set what characters will be used as quotes. Commonly used to set the quotes based in the language being used. It works with the <emphasis>content</emphasis> property when it set it's values to <emphasis>open-quote</emphasis> or <emphasis>close-quote</emphasis>. 
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/generate.html&num;propdef-quotes">http://www.w3.org/TR/CSS2/generate.html&num;propdef-quotes</ulink>
+	      Used by: <emphasis>quotes.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (shape): it sets the rectangle of a <emphasis>clip</emphasis> property, with the <emphasis>rect()</emphasis> function.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/visufx.html&num;value-def-shape">http://www.w3.org/TR/CSS2/visufx.html&num;value-def-shape</ulink>
+	      Used by: <emphasis>clip.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (size-length): it's used by properties that can get as value a size number, or a length identified by a number and the unit used to define the length.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/syndata.html&num;values">http://www.w3.org/TR/CSS2/syndata.html&num;values</ulink>
+	      Used by: <emphasis>size.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (text-shadow): used to set the x and y offset and blur of a shadow in the text.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/text.html&num;propdef-text-shadow">http://www.w3.org/TR/CSS2/text.html&num;propdef-text-shadow</ulink>
+	      Used by: <emphasis>text-shadow.</emphasis>
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      (voice-family): it's used to add a voice set, and generic voice family to aural style sheets.
+	      Url: <ulink url="http://www.w3.org/TR/CSS2/aural.html&num;propdef-voice-family">http://www.w3.org/TR/CSS2/aural.html&num;propdef-voice-family</ulink>
+	      Used by: <emphasis>voice-family</emphasis>.
+	    </para>
+	  </listitem>
+	</itemizedlist>
+      </sect2>
+    </sect1>
+  </chapter>
+  <chapter>
+    <title>
+      Development
+    </title>
+    <sect1>
+      <title>
+	State
+      </title>
+      <para>
+	cssed is in Alpha state now. It will be a beta candidate when the configuration dialogs are finished.
+      </para>
+    </sect1>
+    <sect1>
+      <title>
+	Help
+      </title>
+      <para>
+	If you want to help, make a request on the sourceforge project page, or in the mailing list cssed-devel@lists.sourceforge.net
+      </para>
+      <para>
+	The mailing-list web interface is at http://lists.sourceforge.net/lists/listinfo/cssed-devel
+      </para>
+      <para>
+	You can also send an email with the word <emphasis>help</emphasis> in message's body to <emphasis>cssed-dev-request@lists.sourceforge.net</emphasis>. Or if your mail user agent or web interface adds a signature to your mail, use the words <emphasis>help</emphasis> and in the following line type <emphasis>end</emphasis>.
+      </para>
+      <para>
+	You can get more help with respect to the use of the mailing-list interface on the mailman page at http://www.list.org/mailman-member/index.html
+      </para>
+    </sect1>
+  </chapter>
+  <chapter>
+    <title>
+      Credits
+    </title>
+    <para>
+      This manual has been written with GNU emacs in DocBook format.
+    </para>
+    <para>
+      This document can be found in different outputs: postscript, PDF and HTML. This outputs are produced by the docbook-tools package.
+    </para>
+    <para>
+      All images have been created with Gimp.
+    </para>
+    <sect1>
+      <title>
+	Author
+      </title>
+      <para>
+	This manual and cssed are (c) Iago Rubio Sanfiz, 2003-2004
+      </para>
+      <para>
+	Web site <ulink url="http://cssed.sourceforge.net">http://cssed.sourceforge.net</ulink>
+      </para>
+      <para>
+	Project page <ulink url="http://sourceforge.net/projects/cssed">http://sourceforge.net/projects/cssed</ulink>
+      </para>
+    </sect1>
+    <sect1>
+      <title>
+	Manual and application's versions
+      </title>
+      <para>
+	This is manual version 1.8 and describes cssed pre0.1-4.
+      </para>
+    </sect1>
+  </chapter>
+</book>

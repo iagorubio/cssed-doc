@@ -1,0 +1,54 @@
+<preface id="intro">
+<title>Introduction</title>
+
+<sect1 id="preface-what-is-cssed">
+<title>What is <application>cssed</application>?</title>
+<para><application>cssed</application> is a small program for editing <acronym>CSS</acronym> style sheets, it is developed as an Open Source project under GPL. You can download it from the <ulink url="http://cssed.sourceforge.net"><application>cssed</application> site</ulink> or from the <ulink url="http://sourceforge.net/projects/cssed">Source Forge's Project page</ulink> <anchor id="sub-sf-page">.</para>
+<para>It tries to ease the edition and creation of style sheets to format the output and improve accessibility in web developing.</para>
+</sect1>
+
+<sect1 id="preface-what-is-css">
+<title>What is <acronym>CSS?</acronym></title>
+<para><acronym>CSS</acronym> is the acronym for Cascading Style Sheets, and it is a w3c.org recommendation. <acronym>CSS</acronym> is intended to fix some caveats in <acronym>HTML</acronym> formatting. <acronym>HTML</acronym> has been created to store data in a convenient manner, but not specifically to present it in a visual manner. Further extensions to <acronym>HTML</acronym> gave it the ability to perform rendering tasks, and to embed color and rendering information in some <acronym>HTML</acronym> tags attributes.</para>
+<para>This finally leads to many problems rendering the information stored in the <acronym>HTML</acronym> documents:</para>
+<itemizedlist>
+<listitem>
+<para>Each time a color or rendering attribute changes in a set of <acronym>HTML</acronym> documents, each of its tag attributes must be changed.</para>
+</listitem>
+<listitem>
+<para>The <structfield>face</structfield> attribute of the <structname>font</structname> tag only allows for one font name, so if this font is not present in the client's browser it uses the default font, but still processes all the tag's attributes. If a developer uses the <structname>My Font</structname> font with a size of 8 - that is fine displayed in a browser - the default font with a size 8 will be used if <structname>My Font</structname> is not present; and it is not uncommon that the default font with size 8 makes the site impossible to browse.</para>
+</listitem>
+<listitem>
+<para><acronym>HTML</acronym> must be further extended to allow speech based browser for visual impaired as it has no aural attributes to deal with that kind of browsers.</para>
+</listitem>
+<listitem>
+<para>The formatting attributes into an <acronym>HTML</acronym> document cannot be changed on a browser basis or to any other media than the web browser; so <acronym>HTML</acronym> formatted sites used to look really bad when printed, and were not fully browser independent. When you read in a website <quote>This site have been optimized for this browser and this version with those screen dimensions</quote>, actually the webmaster is telling you <quote>This site will be well rendered only in the browser and on the screen I used to develop it</quote>.</para>
+</listitem>
+</itemizedlist>
+<para><acronym>CSS</acronym> fixes all those problems and others, allows developers to easily change the entire document style with changes in just one document, to show each browser a different page style improving user's browsing experience, to set rules for speech machines, PDA, mobile phone, TV, print and even terminal output.</para>
+<para>One of the best things of <acronym>CSS</acronym> is that it is small and easy to learn. Much more easy than learning <acronym>HTML</acronym> for example.</para>
+
+<sect2 id="preface-further-info">
+<title>Further information</title>
+<itemizedlist>
+<listitem>
+<para> You can find tons of information and links at the<ulink url="http://www.w3.org/Style/CSS/"> w3c.org</ulink> <acronym>CSS</acronym> site</para>
+</listitem>
+<listitem>
+<para><ulink url="http://www.w3.org/TR/CSS1">CSS1 specification</ulink></para>
+</listitem>
+<listitem>
+<para><ulink url="http://www.w3.org/TR/CSS2">CSS2 specification</ulink></para>
+</listitem>
+<listitem>
+<para><ulink url="http://www.positioniseverything.net/">Position is everything</ulink>, a site to learn how to roundabout browser bugs to get the correct rendering </para>
+</listitem>
+</itemizedlist>
+</sect2>
+</sect1>
+
+<sect1 id="preface-who-must-read">
+<title>Who must read this manual</title>
+<para>This is the <application>cssed</application> application User's Manual. It is not a developer guide to the application, nor a <acronym>CSS</acronym> manual. Just read it if you are a <application>cssed</application> user.</para>
+</sect1>
+</preface>

@@ -1,0 +1,509 @@
+<!--
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook V4.1//EN">
+-->
+  <chapter>
+    <title>
+      Using cssed
+    </title>
+    <para>
+      I will explain here how to use cssed ... well ... really I will explain how I use it. As in any other application there are various ways to perform editing tasks, and my way is not a mandatory one. I'm sure when you know how to use cssed, you will use it the way you want to. So just read this as if you don't know how to work with cssed, or you will feel lost when working with it.
+    </para>
+    <sect1>
+      <title>
+	The editor window
+      </title>
+      <para>
+	The editor window is the cssed's document container. Any document opened in cssed, will have it's own editor window where you can see and change document contents. Each opened document is displayed in a tab at the upper left of cssed's editor window. If there are various documents opened, and there's no no more room to display another tab, the new tab will be hidden and two small arrow-buttons facing right and left will appear at the right of the document's tabs. With these two buttons you can browse through all of the opened documents. To see a pop up menu with all the tabs opened in cssed, and choose one of them to make it become the active document, you can right click on any of the tabs and then select the document from the pop up menu list.
+      </para>
+      <para>
+	In the cssed's window title bar there will always be displayed the path to the current opened document; and whether it's a named document, if it has been saved, or was opened from an existing document.
+      </para>
+      <sect2 id="sub-setting-document-preferences">
+	<title>
+	  Setting document preferences
+	</title>
+	<para>
+	  Each document opened in cssed can have it's own preferences and behave in a different way. The &ldquo;Document&rdquo; menu, will let you set the current document's settings. this menu changes each time you switch to another document to reflect it's current settings.
+	</para>
+	<para>
+	  The settings you can choose in this menu entry are:
+	</para>
+	<itemizedlist>
+	  <listitem>
+	    <para>
+	      View line numbers - if chosen, the line numbers are shown in the left margin of cssed.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      View line endings - if chosen, the end of line characters are made visible. It's good to know what kind of document you're editing Unix (lf), mac (cr) or DOS/window (cr and lf)<footnote><para>
+		  The acronyms used to name end of lines are:
+		</para>
+		<itemizedlist>
+		  <listitem>
+		    <para>
+		      CR - Carriage Return
+		    </para>
+		  </listitem>
+		  <listitem>
+		    <para>
+		      LF - Line Feed
+		    </para>
+		  </listitem>
+		  <listitem>
+		    <para>
+		      CR/LF - Uses both Carriage Return and Line Feed.
+		    </para>
+		  </listitem>
+		</itemizedlist>
+	      </footnote>.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      View white spaces - if chosen, the white space characters are show in a graphical way.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      View lines wrapped - if chosen, when the lines are longer than the editor window width, they are cut at the right margin. In this mode the bottom horizontal scroll bar is never show.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      Set auto completion - if chosen, auto completion is enabled for the current document.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      Set EOL mode - if chosen, this entry will convert the end-of-line characters between the most commonly used types. For example, you can convert a Windows document into a Unix one.
+	    </para>    
+	  </listitem>
+	</itemizedlist>
+	<para>
+	  Remember that when you choose the document settings, they are changed only for the current document.
+	</para>
+      </sect2>
+      <sect2>
+	<title>
+	  Accelerator keys
+	</title>
+	<para>
+	  These are the accelerator keys that currently work in cssed, those listed below are for the editor window accelerator keys and menu accelerator keys:
+	</para>
+	<para>
+	  <informaltable><tgroup cols="2" colsep="1" rowsep="1">
+	      <colspec colname="col0" align="left">
+		<colspec colname="col1" align="left">
+		  <thead>
+		    <row>
+		      <entry align="left" valign="top"><para>Accelerator keys</para></entry>
+		      <entry align="left" valign="top"><para>Action</para></entry>
+		    </row>
+		  </thead>
+		  <tbody>
+		    <row>
+		      <entry align="left" valign="top"><para>Ctrl + L</para></entry>
+		      <entry align="left" valign="top"><para>Delete current line</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Ctrl + D</para></entry>
+		      <entry align="left" valign="top"><para>Duplicate current line</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Ctrl + A</para></entry>
+		      <entry align="left" valign="top"><para>Select all text</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Ctrl + Q</para></entry>
+		      <entry align="left" valign="top"><para>Quit the application</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Ctrl + N</para></entry>
+		      <entry align="left" valign="top"><para>Opens a new blank file</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Ctrl + Z</para></entry>
+		      <entry align="left" valign="top"><para>Undo action</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Ctrl + C</para></entry>
+		      <entry align="left" valign="top"><para>Copy</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Ctrl + V</para></entry>
+		      <entry align="left" valign="top"><para>Paste</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Ctrl + X</para></entry>
+		      <entry align="left" valign="top"><para>Cut</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + A</para></entry>
+		      <entry align="left" valign="top"><para>Show auto completion list</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt+ I</para></entry>
+		      <entry align="left" valign="top"><para>Select the current line</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt+ F</para></entry>
+		      <entry align="left" valign="top"><para>Open file menu</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + F + N</para></entry>
+		      <entry align="left" valign="top"><para>Create a new blank file</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + F + O</para></entry>
+		      <entry align="left" valign="top"><para>Open a file</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + F + S</para></entry>
+		      <entry align="left" valign="top"><para>Save the current file</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + F +Q</para></entry>
+		      <entry align="left" valign="top"><para>Quit the application</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + E</para></entry>
+		      <entry align="left" valign="top"><para>Open edit menu</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + E + T</para></entry>
+		      <entry align="left" valign="top"><para>Cut ( as Ctrl + x)</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + E + C</para></entry>
+		      <entry align="left" valign="top"><para>Copy ( as Ctrl + C)</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + E + P </para></entry>
+		      <entry align="left" valign="top"><para>Paste ( as Ctrl + V )</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + E + D</para></entry>
+		      <entry align="left" valign="top"><para>Delete selection</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + D</para></entry>
+		      <entry align="left" valign="top"><para>Open document menu</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + D + N </para></entry>
+		      <entry align="left" valign="top"><para>Toggle view line numbers</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + D + E</para></entry>
+		      <entry align="left" valign="top"><para>Toggle view line endings</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + D + S</para></entry>
+		      <entry align="left" valign="top"><para>Toggle view white spaces</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + D + W</para></entry>
+		      <entry align="left" valign="top"><para>Toggle wrap lines</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + D + A</para></entry>
+		      <entry align="left" valign="top"><para>Toggle auto completion</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + T </para></entry>
+		      <entry align="left" valign="top"><para>Open tools menu</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + T + S</para></entry>
+		      <entry align="left" valign="top"><para>Scan selector</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + T + D</para></entry>
+		      <entry align="left" valign="top"><para>Print document information</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + T + A</para></entry>
+		      <entry align="left" valign="top"><para>Show auto completion (as Ctrl +A)&nbsp;</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + T + V</para></entry>
+		      <entry align="left" valign="top"><para>Validate and dump document</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + T + O</para></entry>
+		      <entry align="left" valign="top"><para>Validate only</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + H</para></entry>
+		      <entry align="left" valign="top"><para>Open help menu</para></entry>
+		    </row>
+		    <row>
+		      <entry align="left" valign="top"><para>Alt + H + A</para></entry>
+		      <entry align="left" valign="top"><para>Show about dialog</para></entry>
+		    </row>
+		  </tbody>
+	    </tgroup></informaltable>
+	</para>
+      </sect2>
+      <sect2 id="sub-auto-completion">
+	<title>
+	  Auto completion
+	</title>
+	<para>
+	  Auto completion is one of the most used features of cssed. Initially typing a property name, auto completion will show all the possible properties that start with those letters. When one of those properties is chosen, you can then see all the possible values for that property from a pop-up menu. And from that pop-up you can then choose any value to have it filled-in automatically.
+	</para>
+	<para>
+	  To use auto completion, it must be activated in the &ldquo;Document-&#62;Enable Auto-completion&rdquo; menu (<xref linkend="sub-setting-document-preferences">).
+	</para>
+	<para>
+	  Once activated auto completion works this way:
+	</para>
+	<para>
+	  When you type the opening brace &ldquo;&#123;&ldquo; of a selector's declaration a list with all possible CSS properties will be shown. You can then select the desired property with the mouse by clicking on one of the properties shown, or with the up down arrow keys and then pressing the return key when the desired property is selected.
+	</para>
+	<para>
+	  Once the property is written in the document, by typing the sentence separator character &ldquo;:&rdquo; a pop-up menu with the possible values for that property are shown. You can select the preferred value the same way you did it with the auto completion list.
+	</para>
+	<para>
+	  If you had chosen a value by error, just delete it and the sentence separator character and enter the sentence separator character again to trigger the value's pop-up menu.
+	</para>
+	<para>
+	  You can hide the auto completion list with the &ldquo;Esc&rdquo; key.
+	</para>
+	<para>
+	  To quickly switch auto completion on and off, you can use the accelerator key &ldquo;Alt + D + A&rdquo;. With these accelerator keys you can use auto completion for a single item, and the toggle it off again.
+	</para>
+	<para>
+	  Some users don't like the auto completion cycle. To let them use just the auto completion list, the accelerator keys &ldquo;Alt + A&rdquo; will show this list even if auto completion is disabled for the current document. If auto completion was disabled and you use the &ldquo;Alt + A&rdquo; accelerator keys, trying to enable auto completion will not work.
+	</para>
+      </sect2>
+	<sect2>
+	  <title>
+	    Auto completion annoyances
+	  </title>
+	  <para>
+	    The auto completion is not finished yet, and there are some situations where it can be annoying to the user. The auto completion list is shown each time the opening brace is typed. This way when you type a media at-rule - for example &#38;nbsp&#59; - the auto completion list is show even when a property like this is not valid CSS. To hide the auto completion list use the &ldquo;Esc&rdquo; key.
+	  </para>
+	  <para>
+	    The auto completion pop-up menu works by reading the word from the start of the line to the sentence separator, and looking for a matching string in the CSS tree view (<xref linkend="sub-the-treeview">). This way it will only work with CSS formated with a sentence per line and not when you put various sentences in the same line, even though it might be valid CSS.
+	  </para>
+	  <para>
+	    To get auto completion to work with these requirements, cssed always adds an end-of-line character when you type the sentence end character &ldquo;;&rdquo;.
+	  </para>
+	  <para>
+	    This way - when using auto completion - you will need to delete the last line added by cssed. To do it quickly use the accelerator keys &ldquo;Ctrl + l&rdquo;.
+	  </para>
+      </sect2>
+      <sect2>
+	<title>
+	  Selecting text blocks
+	</title>
+	<para>
+	  In cssed, as in most text editors, the usual operation to selecting a block of text, is to push the left mouse button, use the mouse to select the block, and release the button. But there are other ways.
+	</para>
+	<para>
+	  You can use, the  &ldquo;Ctrl + A&ldquo; keys to select all the text in the current document.
+	</para>
+	<para>
+	  If you have the line numbers margin visible, you can also do the following operations:
+	  <itemizedlist>
+	    <listitem>
+	      <para>
+		click in a line number to select the whole line
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+		push Ctrl and click in the number's margin to select all document's text
+	      </para>
+	    </listitem>
+	    <listitem>
+	      <para>
+		And -the most interesting one - place the cursor at the start of the text to be selected, push the Shift key and click on the line number where you want the selected block of text to end.
+	      </para>
+	    </listitem>
+	  </itemizedlist>
+	</para>
+      </sect2>
+      <sect2>
+	<title>
+	  Indenting text blocks
+	</title>
+	<para>
+	  In cssed the behavior of the tab key when indenting a selected block of text differs if there is one line of text selected or a block of text selected containing multiple lines:
+	</para>
+	<itemizedlist>
+	  <listitem>
+	    <para>
+	      When one line is selected the &ldquo;Tab&rdquo; key will delete that line and add a tab character.
+	    </para>
+	  </listitem>
+	  <listitem>
+	    <para>
+	      When multiple lines are selected and the tab key is used, the whole block will be indented in one tab.
+	    </para>
+	  </listitem>
+	</itemizedlist>
+	<para>
+	  If you want to indent a block of selected text, be sure it contains more than one line. If you want to indent a single line, don't select it but put the caret before it and then use the &ldquo;Tab&rdquo; key.
+	</para>
+      </sect2>
+    </sect1>
+    <sect1 id="sub-the-treeview">
+      <title>
+	The tree view
+      </title>
+      <para>
+	The CSS tree view is located at the side panel (<xref linkend="sub-the-side-panel">) and allows you to see all properties and values in the current CSS definition file (<xref linkend="sec-CSS-definition-file">).
+      </para>
+      <para>
+	You can browse through these values and add them by clicking on the preferred value(s) of any property. This will add both the property/value pair. An end-of-line is also added to allow you to quickly insert various properties without typing the end-of-line yourself.
+      </para>
+    </sect1>
+    <sect1>
+      <title>
+	The selector scanner
+      </title>
+      <para>
+	The selector scanner is not finished yet, but is now a working feature. 
+      </para>
+      <para>
+	To use the selector scanner, you must place the caret<footnote><para>
+	    The caret is the blinking line that shows you the location of the text insertion point.
+	  </para>
+	</footnote> between the opening and closing brace of a selector or identity definition. When you select the menu &ldquo;Tools->Scan selector&rdquo; the current declaration is scanned and shown in the list at the upper side of the side panel (<xref linkend="sub-the-side-panel">).
+      </para>
+      <para>
+	Once you've got the values in the list you can edit them by clicking in the value's column. It's planned that in the future the selector scanner list, will also show a list with the possible values of the current property, and will be a drop target for the CSS tree view to quickly insert or replace new property/value pairs.
+      </para>
+    </sect1>
+    <sect1>
+      <title>
+	The scratch pad
+      </title>
+      <para>
+	The scratch pad is one of those silly features that you can love or hate. It's nothing but a text buffer that can be used as a drag &amp; drop target/source to the editor window, as a second clipboard or simply for notes.
+      </para>
+      <para>
+	I added it to cssed because some years ago I used an application with a scratch pad similar to this. I started to work with this application without using it at all, while time passed, I began to use it for a lot of things: as a second editable clipboard, to put notes about what I was doing while editing multiple documents, and even to copy/edit and paste a buffer into various documents.
+      </para>
+      <para>
+	The clipboard won't allow you to easily edit it's contents, so I finally fell in love with the scratch pad. That's the short explanation about why cssed have an &ldquo;scratch pad&rdquo;.
+      </para>
+    </sect1>
+    <sect1>
+      <title>
+	The program output window
+      </title>
+      <para>
+	To avoid the excessive use of warning dialog boxes, cssed uses a list at the bottom of the application to show relevant but not critical output. It's used by the CSS dialog to warn about problems or default values in the dialog boxes.
+      </para>
+      <para>
+	It's also used by the validator to show it's output.
+      </para>
+      <para>
+		You can clear the output window in the menu entry &ldquo;Tools-&#62;Clear program output&rdquo;.
+      </para>
+    </sect1>
+    <sect1>
+      <title>
+	The CSS menu (unfinished)
+      </title>
+      <para>
+	From this menu you have access to all of the dialogs - just the dialogs - used in the tree view or auto completion menu, to ease the insertion of complex CSS values.
+      </para>
+      <para>
+	From this menu you also can access the <emphasis>Selector Wizard</emphasis>.
+      </para>
+    </sect1>
+    <sect1>
+      <title>
+	The selector Wizard		
+      </title>		
+      <para>
+	<figure float="0">
+	  <title>
+	    selector wizard
+	  </title>
+	  <screenshot>
+	    <mediaobject>
+	      <imageobject>
+		<imagedata fileref="figures/selector-wizard.png">
+	      </imageobject>
+	      <textobject>
+		<phrase>
+		  The cssed selector wizard
+		</phrase>
+	      </textobject>
+	    </mediaobject>
+	  </screenshot>
+	</figure>
+      </para>
+      <para>
+	The selector wizard lets you add one or more various empty selectors at a time. This way you can quickly start a new style sheet with the most common selectors. Remember, this only applies to style sheets used with HTML documents.
+      </para>
+      <para>
+	There are many different kinds of selectors you can add from this dialog. The selector's types can be selected from the buttons at the upper left of the dialog. And you can only add one type of selector at a time.
+      </para>
+      <para>
+	When you select a selector set - a group of selectors in the left-most list of this dialog - you can choose between creating a declaration for each, or using the same declaration for all. This can be done by selecting a radio button from the lower left of the dialog.
+      </para>
+      <para>
+	The types of selectors that can be found are:
+      </para>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    Single selector - the button labeled selector: it adds a single selector. The style will be applied to any tag matching the selected tag.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Child selectors: here you can set the style of any selector with a matching parent. The parent selector will be chosen from the first list, the child selector from the second. As example <emphasis>p > b</emphasis> - select <emphasis>p</emphasis> in the first list and <emphasis>b</emphasis> in the second - this will apply the style to any <emphasis>b</emphasis> tag with a <emphasis>p</emphasis> tag parent.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Class selectors: it sets the style of any selector identified by the <emphasis>class</emphasis> attribute. As example, <emphasis>p.test</emphasis> will match any <emphasis>p</emphasis> tag with <emphasis>class="test"</emphasis> attribute.<programlisting><![CDATA[<p class="test">this  will be shown with the p.test style</p>]]></programlisting>
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Sibling selectors: with sibling selectors you can apply style to one tag preceded by other tag of the same parent. If you want to apply style - for example - to any <emphasis>p</emphasis> tag preceded by a <emphasis>h1</emphasis> tag, you must choose in the Sibling pane, h1 in the first list and p in the second list. This will  produce the selector <emphasis>h1  +  p</emphasis>.<programlisting><![CDATA[<div><h1>header</h1><p>this  will be shown with the h1 + p style</p>]]></programlisting>
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Contextual selectors: contetxtual selectors, lets you apply a style to any tag with a specific ancestor. For example, selecting <emphasis>p</emphasis> in the first list and <emphasis>b</emphasis>  in the second, will apply style to all <emphasis>b</emphasis> tags within a <emphasis>p</emphasis> tag.
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </sect1>
+    <sect1>
+      <title>
+	The syntax validator
+      </title>
+      <para>
+	You can validate the syntax of your CSS document from the menu &ldquo;Tools-&#62;Validate and dump&rdquo; or &ldquo;Tools-&#62;Validate only&rdquo;.
+      </para>
+      <para>
+	The validator uses a subset of the libcroco library modified to get it's output to cssed.
+      </para>
+      <para>
+	Libcroco is a parsing and layout engine used to parse and show CSS styled output. It works exactly as a user agent, parsing until a fatal error and avoiding some invalid values. Therefore we can know how our style sheet will be read from a CSS2 compliant UA.
+      </para>
+      <para>
+	In the menu &ldquo;Tools-&#62;Validate and dump&rdquo; you can check this behavior. It will show in the output window what it's reading and when it stops parsing.
+      </para>
+      <para>
+	The menu &ldquo;Tools-&#62;Validate only&rdquo; will show only the validation results.
+      </para>
+      <para>
+	This validator is unfinished, and some strange behaviors have been observed.
+      </para>
+      <para>
+	When you use empty declarations, the validator will fail even though the declarations are valid CSS.
+      </para>
+    </sect1>
+  </chapter>
